@@ -4,13 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#17112e">
-<title>Anjali & Mridul · Shubh Vivah</title>
-<meta name="description" content="You are invited to the wedding of Anjali & Mridul · 2–3 December 2026">
-<meta property="og:title" content="Anjali & Mridul · Shubh Vivah">
+<title>Mridul & Kunika · Shubh Vivah</title>
+<meta name="description" content="You are invited to the wedding of Mridul Raj & Kunika Singh · 2–3 December 2026">
+<meta property="og:title" content="Mridul & Kunika · Shubh Vivah">
 <meta property="og:description" content="Haldi, Ring Ceremony, Sangeet, Phere, Baraat & Reception · 2–3 December 2026">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Jost:wght@300;400;500&family=Yatra+One&family=Noto+Serif+Devanagari:wght@400;500&display=swap" rel="stylesheet">
+<script src="config.js"></script>
 <!-- Motion: the vanilla-JS edition of Framer Motion (springs, timelines, scroll & in-view animations) -->
 <script src="https://cdn.jsdelivr.net/npm/motion@11.18.2/dist/motion.js"></script>
 <script>
@@ -473,9 +474,9 @@ a.venue-ico{display:grid}
     <div class="hero-text" id="heroText">
       <p class="eyebrow fx" id="heroEyebrow"></p>
       <h1 class="names" id="heroNames">
-        <span class="w" id="brideName" data-split></span>
-        <span class="amp fx">&amp;</span>
         <span class="w" id="groomName" data-split></span>
+        <span class="amp fx">&amp;</span>
+        <span class="w" id="brideName" data-split></span>
       </h1>
       <p class="invite-line fx" id="inviteLine"></p>
       <div class="dateblock fx" id="dateBlock">
@@ -498,8 +499,56 @@ a.venue-ico{display:grid}
     </header>
 
     <div class="couple">
-      <!-- PORTRAIT PLACEHOLDER (Bride): set CONFIG.portraits.bride to your illustration file to replace this artwork -->
-      <figure class="portrait bride" data-r="left">
+      <!-- PORTRAIT (Groom - First): set CONFIG.portraits.groom to your illustration file to replace this artwork -->
+      <figure class="portrait groom" data-r="left">
+        <div class="par"><div class="frame"><div class="frame-3d" data-tilt><div class="frame-in">
+          <svg id="art-groom" viewBox="0 0 200 260" role="img" aria-label="Illustrated portrait of the groom, Mridul">
+            <g clip-path="url(#portraitClip)">
+              <rect width="200" height="260" fill="#13877a"/>
+              <rect width="200" height="260" fill="url(#pDotK)" opacity=".55"/>
+              <g class="figure">
+                <g transform="translate(100 118)"><g class="spin" data-halo="#f4a10e,#fff3c4"></g></g>
+                <path d="M26 262 C30 214 56 190 100 184 C144 190 170 214 174 262Z" fill="#f7eedc" stroke="#17112e" stroke-width="1.3"/>
+                <path d="M26 262 C30 214 56 190 100 184 C144 190 170 214 174 262Z" fill="url(#pDash)"/>
+                <path d="M100 196 V262" stroke="#c9852a" stroke-width="2"/>
+                <g fill="#e2ad4f" stroke="#17112e" stroke-width="1"><circle cx="100" cy="214" r="2.8"/><circle cx="100" cy="230" r="2.8"/><circle cx="100" cy="246" r="2.8"/></g>
+                <path d="M128 190 C152 204 162 230 160 262 L140 262 C142 236 134 214 116 196Z" fill="#d63a1f" stroke="#17112e" stroke-width="1.3"/>
+                <path d="M128 190 C152 204 162 230 160 262 L140 262 C142 236 134 214 116 196Z" fill="url(#pDotW)"/>
+                <path d="M88 150 V178 H112 V150Z" fill="#c98a5a" stroke="#17112e" stroke-width="1.3"/>
+                <path d="M84 178 L100 198 L116 178 L116 188 L100 206 L84 188Z" fill="#e2ad4f" stroke="#17112e" stroke-width="1.2"/>
+                <path d="M74 190 Q100 262 126 190" fill="none" stroke="#fff6e0" stroke-width="4.6" stroke-linecap="round" stroke-dasharray="0 7"/>
+                <g fill="#c98a5a" stroke="#17112e" stroke-width="1.3">
+                  <ellipse cx="73" cy="124" rx="5" ry="8"/><ellipse cx="127" cy="124" rx="5" ry="8"/>
+                  <ellipse cx="100" cy="122" rx="27" ry="33"/>
+                </g>
+                <ellipse cx="85" cy="135" rx="6" ry="3.5" fill="#d9705a" opacity=".35"/><ellipse cx="115" cy="135" rx="6" ry="3.5" fill="#d9705a" opacity=".35"/>
+                <g fill="none" stroke="#2a1a12" stroke-width="1.8" stroke-linecap="round">
+                  <path d="M84 123 Q90 128 96 123"/><path d="M104 123 Q110 128 116 123"/>
+                  <path d="M82 114 Q90 109 97 113"/><path d="M103 113 Q110 109 118 114"/>
+                </g>
+                <path d="M100 121 Q96 134 101 137" fill="none" stroke="#8a5636" stroke-width="1.4" stroke-linecap="round"/>
+                <path d="M86 144 Q93 138.5 100 142 Q107 138.5 114 144 Q107 147 100 145.5 Q93 147 86 144Z" fill="#2a1a12"/>
+                <path d="M93 150 Q100 154 107 150" fill="none" stroke="#8a3a2a" stroke-width="1.6" stroke-linecap="round"/>
+                <path d="M100 99 V109" stroke="#d63a1f" stroke-width="3.2" stroke-linecap="round"/>
+                <path d="M69 108 C61 84 70 58 100 56 C130 58 139 84 131 108 C121 98 111 95 100 98 C89 95 79 98 69 108Z" fill="#d63a1f" stroke="#17112e" stroke-width="1.3"/>
+                <path d="M69 108 C61 84 70 58 100 56 C130 58 139 84 131 108 C121 98 111 95 100 98 C89 95 79 98 69 108Z" fill="url(#pDashW)"/>
+                <g fill="none" stroke="#8f1f0e" stroke-width="1.5"><path d="M71 96 C88 80 114 76 129 90"/><path d="M73 82 C90 68 114 66 126 76"/></g>
+                <g stroke-linecap="round" stroke-dasharray="0 4.6" stroke-width="3" fill="none"><path d="M71 104 V146" stroke="#fff6e0"/><path d="M77 102 V136" stroke="#f4a10e"/><path d="M123 102 V136" stroke="#f4a10e"/><path d="M129 104 V146" stroke="#fff6e0"/></g>
+                <path d="M114 72 C120 52 132 46 140 36 C136 50 128 60 119 74Z" fill="#fff6e0" stroke="#17112e" stroke-width="1.2"/>
+                <path d="M114 72 C120 52 132 46 140 36 C136 50 128 60 119 74Z" fill="url(#pDotK)"/>
+                <circle cx="115" cy="76" r="5.5" fill="#f4a10e" stroke="#17112e" stroke-width="1.2"/><circle cx="115" cy="76" r="2" fill="#13877a"/>
+                <path d="M84 100 Q100 106 116 100" fill="none" stroke="#fff6e0" stroke-width="3" stroke-linecap="round" stroke-dasharray="0 5"/>
+              </g>
+            </g>
+            <path d="M4 260 V98 C4 46 58 28 82 16 C92 11 97 6 100 2 C103 6 108 11 118 16 C142 28 196 46 196 98 V260Z" fill="none" stroke="#e2ad4f" stroke-width="3.5"/>
+            <path transform="translate(100 260) scale(.92) translate(-100 -260)" d="M4 260 V98 C4 46 58 28 82 16 C92 11 97 6 100 2 C103 6 108 11 118 16 C142 28 196 46 196 98 V260" fill="none" stroke="#f5d692" stroke-width="1.6" stroke-dasharray="0 5.5" stroke-linecap="round" opacity=".85"/>
+          </svg>
+        </div></div></div></div>
+        <figcaption><small id="groomRole"></small><strong id="groomCaption"></strong><span id="groomHindi"></span></figcaption>
+      </figure>
+
+      <!-- PORTRAIT (Bride - Second): set CONFIG.portraits.bride to your illustration file to replace this artwork -->
+      <figure class="portrait bride" data-r="right" data-delay=".12">
         <div class="par"><div class="frame"><div class="frame-3d" data-tilt><div class="frame-in">
           <svg id="art-bride" viewBox="0 0 200 260" role="img" aria-label="Illustrated portrait of the bride, Anjali">
             <g clip-path="url(#portraitClip)">
@@ -549,54 +598,6 @@ a.venue-ico{display:grid}
           </svg>
         </div></div></div></div>
         <figcaption><small id="brideRole"></small><strong id="brideCaption"></strong><span id="brideHindi"></span></figcaption>
-      </figure>
-
-      <!-- PORTRAIT PLACEHOLDER (Groom): set CONFIG.portraits.groom to your illustration file to replace this artwork -->
-      <figure class="portrait groom" data-r="right" data-delay=".12">
-        <div class="par"><div class="frame"><div class="frame-3d" data-tilt><div class="frame-in">
-          <svg id="art-groom" viewBox="0 0 200 260" role="img" aria-label="Illustrated portrait of the groom, Mridul">
-            <g clip-path="url(#portraitClip)">
-              <rect width="200" height="260" fill="#13877a"/>
-              <rect width="200" height="260" fill="url(#pDotK)" opacity=".55"/>
-              <g class="figure">
-                <g transform="translate(100 118)"><g class="spin" data-halo="#f4a10e,#fff3c4"></g></g>
-                <path d="M26 262 C30 214 56 190 100 184 C144 190 170 214 174 262Z" fill="#f7eedc" stroke="#17112e" stroke-width="1.3"/>
-                <path d="M26 262 C30 214 56 190 100 184 C144 190 170 214 174 262Z" fill="url(#pDash)"/>
-                <path d="M100 196 V262" stroke="#c9852a" stroke-width="2"/>
-                <g fill="#e2ad4f" stroke="#17112e" stroke-width="1"><circle cx="100" cy="214" r="2.8"/><circle cx="100" cy="230" r="2.8"/><circle cx="100" cy="246" r="2.8"/></g>
-                <path d="M128 190 C152 204 162 230 160 262 L140 262 C142 236 134 214 116 196Z" fill="#d63a1f" stroke="#17112e" stroke-width="1.3"/>
-                <path d="M128 190 C152 204 162 230 160 262 L140 262 C142 236 134 214 116 196Z" fill="url(#pDotW)"/>
-                <path d="M88 150 V178 H112 V150Z" fill="#c98a5a" stroke="#17112e" stroke-width="1.3"/>
-                <path d="M84 178 L100 198 L116 178 L116 188 L100 206 L84 188Z" fill="#e2ad4f" stroke="#17112e" stroke-width="1.2"/>
-                <path d="M74 190 Q100 262 126 190" fill="none" stroke="#fff6e0" stroke-width="4.6" stroke-linecap="round" stroke-dasharray="0 7"/>
-                <g fill="#c98a5a" stroke="#17112e" stroke-width="1.3">
-                  <ellipse cx="73" cy="124" rx="5" ry="8"/><ellipse cx="127" cy="124" rx="5" ry="8"/>
-                  <ellipse cx="100" cy="122" rx="27" ry="33"/>
-                </g>
-                <ellipse cx="85" cy="135" rx="6" ry="3.5" fill="#d9705a" opacity=".35"/><ellipse cx="115" cy="135" rx="6" ry="3.5" fill="#d9705a" opacity=".35"/>
-                <g fill="none" stroke="#2a1a12" stroke-width="1.8" stroke-linecap="round">
-                  <path d="M84 123 Q90 128 96 123"/><path d="M104 123 Q110 128 116 123"/>
-                  <path d="M82 114 Q90 109 97 113"/><path d="M103 113 Q110 109 118 114"/>
-                </g>
-                <path d="M100 121 Q96 134 101 137" fill="none" stroke="#8a5636" stroke-width="1.4" stroke-linecap="round"/>
-                <path d="M86 144 Q93 138.5 100 142 Q107 138.5 114 144 Q107 147 100 145.5 Q93 147 86 144Z" fill="#2a1a12"/>
-                <path d="M93 150 Q100 154 107 150" fill="none" stroke="#8a3a2a" stroke-width="1.6" stroke-linecap="round"/>
-                <path d="M100 99 V109" stroke="#d63a1f" stroke-width="3.2" stroke-linecap="round"/>
-                <path d="M69 108 C61 84 70 58 100 56 C130 58 139 84 131 108 C121 98 111 95 100 98 C89 95 79 98 69 108Z" fill="#d63a1f" stroke="#17112e" stroke-width="1.3"/>
-                <path d="M69 108 C61 84 70 58 100 56 C130 58 139 84 131 108 C121 98 111 95 100 98 C89 95 79 98 69 108Z" fill="url(#pDashW)"/>
-                <g fill="none" stroke="#8f1f0e" stroke-width="1.5"><path d="M71 96 C88 80 114 76 129 90"/><path d="M73 82 C90 68 114 66 126 76"/></g>
-                <g stroke-linecap="round" stroke-dasharray="0 4.6" stroke-width="3" fill="none"><path d="M71 104 V146" stroke="#fff6e0"/><path d="M77 102 V136" stroke="#f4a10e"/><path d="M123 102 V136" stroke="#f4a10e"/><path d="M129 104 V146" stroke="#fff6e0"/></g>
-                <path d="M114 72 C120 52 132 46 140 36 C136 50 128 60 119 74Z" fill="#fff6e0" stroke="#17112e" stroke-width="1.2"/>
-                <path d="M114 72 C120 52 132 46 140 36 C136 50 128 60 119 74Z" fill="url(#pDotK)"/>
-                <circle cx="115" cy="76" r="5.5" fill="#f4a10e" stroke="#17112e" stroke-width="1.2"/><circle cx="115" cy="76" r="2" fill="#13877a"/>
-                <path d="M84 100 Q100 106 116 100" fill="none" stroke="#fff6e0" stroke-width="3" stroke-linecap="round" stroke-dasharray="0 5"/>
-              </g>
-            </g>
-            <path d="M4 260 V98 C4 46 58 28 82 16 C92 11 97 6 100 2 C103 6 108 11 118 16 C142 28 196 46 196 98 V260Z" fill="none" stroke="#e2ad4f" stroke-width="3.5"/>
-            <path transform="translate(100 260) scale(.92) translate(-100 -260)" d="M4 260 V98 C4 46 58 28 82 16 C92 11 97 6 100 2 C103 6 108 11 118 16 C142 28 196 46 196 98 V260" fill="none" stroke="#f5d692" stroke-width="1.6" stroke-dasharray="0 5.5" stroke-linecap="round" opacity=".85"/>
-          </svg>
-        </div></div></div></div>
-        <figcaption><small id="groomRole"></small><strong id="groomCaption"></strong><span id="groomHindi"></span></figcaption>
       </figure>
     </div>
 
@@ -689,30 +690,32 @@ a.venue-ico{display:grid}
 <script id="wedding-config-data" type="application/json">
 {
   "meta": {
-    "title": "Anjali & Mridul · Shubh Vivah",
-    "description": "You are invited to the wedding of Anjali & Mridul · 2–3 December 2026",
-    "ogTitle": "Anjali & Mridul · Shubh Vivah",
+    "title": "Mridul & Kunika · Shubh Vivah",
+    "description": "You are invited to the wedding of Mridul Raj & Kunika Singh · 2–3 December 2026",
+    "ogTitle": "Mridul & Kunika · Shubh Vivah",
     "ogDescription": "Haldi, Ring Ceremony, Sangeet, Phere, Baraat & Reception · 2–3 December 2026"
   },
   "couple": {
-    "bride": {
-      "name": "Anjali",
-      "hindi": "अंजलि",
-      "role": "The Bride",
-      "portrait": ""
-    },
     "groom": {
-      "name": "Mridul",
-      "hindi": "मृदुल",
+      "name": "Mridul Raj",
+      "heroName": "Mridul",
+      "hindi": "मृदुल राज",
       "role": "The Groom",
       "portrait": ""
     },
-    "monogram": "A & M"
+    "bride": {
+      "name": "Kunika Singh",
+      "heroName": "Kunika",
+      "hindi": "कुनिका सिंह",
+      "role": "The Bride",
+      "portrait": ""
+    },
+    "monogram": "M & K"
   },
   "wedding": {
     "topBlessing": "॥ जय जिनेन्द्र ॥",
     "subBlessing": "॥ शुभ विवाह ॥",
-    "sealMantra": "SHUBH VIVAH ✦ ANJALI & MRIDUL ✦ 2 & 3 DECEMBER 2026 ✦",
+    "sealMantra": "SHUBH VIVAH ✦ MRIDUL & KUNIKA ✦ 2 & 3 DECEMBER 2026 ✦",
     "sealTap": "Tap to open",
     "gateInviteHi": "आप सादर आमंत्रित हैं",
     "gateInviteEn": "You are cordially invited",
@@ -818,12 +821,11 @@ a.venue-ico{display:grid}
     "sectionTitle": "With Love & Blessings",
     "lead": "Your presence and blessings will make our celebration complete.",
     "leadHi": "आपकी उपस्थिति और आशीर्वाद से हमारा उत्सव पूर्ण होगा।",
-    "signature": "Anjali & Mridul",
+    "signature": "Mridul & Kunika",
     "family": "with our families",
     "closingMantra": "॥ जय जिनेन्द्र ॥"
   }
 }
-
 </script>
 
 <script>
@@ -832,12 +834,15 @@ a.venue-ico{display:grid}
    Loads from config.json with fallback to embedded config
    ========================================================= */
 async function loadConfig() {
-  try {
-    const res = await fetch('config.json');
-    if (res.ok) return await res.json();
-  } catch (e) {
-    console.info('Could not fetch config.json directly (e.g. running via file://). Using embedded fallback.', e);
+  if (location.protocol.startsWith('http')) {
+    try {
+      const res = await fetch('config.json?v=' + Date.now());
+      if (res.ok) return await res.json();
+    } catch (e) {
+      console.info('Fetch config.json failed, falling back to local config...', e);
+    }
   }
+  if (window.CONFIG) return window.CONFIG;
   const fallback = document.getElementById('wedding-config-data');
   if (fallback) {
     try { return JSON.parse(fallback.textContent); } catch (e) {}
@@ -874,7 +879,7 @@ function applyDynamicData(c) {
 
   // Preloader
   const ldNames = $('#ldNames');
-  if (ldNames && c.couple) ldNames.textContent = `${c.couple.bride.name} & ${c.couple.groom.name}`;
+  if (ldNames && c.couple) ldNames.textContent = `${c.couple.groom.name} & ${c.couple.bride.name}`;
   const ldHi = $('#ldHi');
   if (ldHi && c.wedding?.subBlessing) ldHi.textContent = c.wedding.subBlessing;
 
@@ -907,14 +912,16 @@ function applyDynamicData(c) {
   const heroEyebrow = $('#heroEyebrow');
   if (heroEyebrow && c.wedding?.eyebrow) heroEyebrow.textContent = c.wedding.eyebrow;
 
-  const heroNames = $('#heroNames');
+    const heroNames = $('#heroNames');
   if (heroNames && c.couple) {
-    heroNames.setAttribute('aria-label', `${c.couple.bride.name} and ${c.couple.groom.name}`);
+    const gName = c.couple.groom?.heroName || c.couple.groom?.name?.split(' ')[0] || '';
+    const bName = c.couple.bride?.heroName || c.couple.bride?.name?.split(' ')[0] || '';
+    heroNames.setAttribute('aria-label', `${c.couple.groom.name} and ${c.couple.bride.name}`);
+    const groomName = $('#groomName');
+    if (groomName) groomName.textContent = gName;
+    const brideName = $('#brideName');
+    if (brideName) brideName.textContent = bName;
   }
-  const brideName = $('#brideName');
-  if (brideName && c.couple?.bride?.name) brideName.textContent = c.couple.bride.name;
-  const groomName = $('#groomName');
-  if (groomName && c.couple?.groom?.name) groomName.textContent = c.couple.groom.name;
 
   const inviteLine = $('#inviteLine');
   if (inviteLine && c.wedding?.invitationLine) inviteLine.textContent = c.wedding.invitationLine;
@@ -1598,7 +1605,7 @@ function initCalendar(c) {
   calBtn.addEventListener('click', () => {
     const v = c.venue || {}, loc = [v.name, v.address].filter(Boolean).join(', ').replace(/([,;])/g, '\\$1');
     const next = iso => { const d = new Date(+iso.slice(0, 4), +iso.slice(4, 6) - 1, +iso.slice(6) + 1); return `${d.getFullYear()}${String(d.getMonth() + 1).padStart(2, '0')}${String(d.getDate()).padStart(2, '0')}`; };
-    const coupleName = c.couple ? `${c.couple.bride.name} & ${c.couple.groom.name}` : 'Wedding';
+    const coupleName = c.couple ? `${c.couple.groom.name} & ${c.couple.bride.name}` : 'Wedding';
     const lines = ['BEGIN:VCALENDAR', 'VERSION:2.0', `PRODID:-//${coupleName}//Wedding//EN`, 'CALSCALE:GREGORIAN'];
     (c.days || []).forEach((d, i) => {
       lines.push('BEGIN:VEVENT', `UID:wedding-day${i + 1}-${d.iso}@wedding`, 'DTSTAMP:20261019T000000Z',
@@ -1611,7 +1618,7 @@ function initCalendar(c) {
     lines.push('END:VCALENDAR');
     const blob = new Blob([lines.join('\r\n')], { type: 'text/calendar' });
     const a = document.createElement('a');
-    const slug = (c.couple ? `${c.couple.bride.name}-${c.couple.groom.name}` : 'Wedding').replace(/\s+/g, '-');
+    const slug = (c.couple ? `${c.couple.groom.name}-${c.couple.bride.name}` : 'Wedding').replace(/\s+/g, '-');
     a.href = URL.createObjectURL(blob); a.download = `${slug}-Wedding.ics`;
     document.body.appendChild(a); a.click(); a.remove();
     setTimeout(() => URL.revokeObjectURL(a.href), 2000);
@@ -1624,7 +1631,7 @@ function initShare(c) {
   const shareBtn = $('#shareBtn');
   if (!shareBtn) return;
   shareBtn.addEventListener('click', async () => {
-    const coupleName = c.couple ? `${c.couple.bride.name} & ${c.couple.groom.name}` : 'Wedding';
+    const coupleName = c.couple ? `${c.couple.groom.name} & ${c.couple.bride.name}` : 'Wedding';
     const data = {
       title: c.meta?.title || `${coupleName} · Shubh Vivah`,
       text: c.meta?.description || `You are invited to the wedding of ${coupleName}`,

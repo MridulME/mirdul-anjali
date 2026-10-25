@@ -2,13 +2,15 @@
 
 A luxury, interactive digital Indian wedding card web application inspired by traditional royal aesthetics and Gond folk art.
 
-This repository is a faithful replication of [kunika-navneet-wedding-card.vercel.app](https://kunika-navneet-wedding-card.vercel.app/), upgraded with a **dynamic JSON-driven configuration system** (`config.json`).
+This repository is a faithful replication of [kunika-navneet-wedding-card.vercel.app](https://kunika-navneet-wedding-card.vercel.app/), customized for **Mridul & Kunika** with the **Groom details positioned first**, and upgraded with a **dynamic configuration system** (`config.json` & `config.js`).
 
 ---
 
 ## ✨ Features
 
-- **📂 JSON-Driven Architecture**: All names, dates, events, venues, descriptions, and greetings are decoupled from HTML and loaded dynamically from [`config.json`](config.json).
+- **🤵 Groom Details First**: Mridul Raj & Kunika Singh. Groom's name and illustrated portrait are positioned first throughout the entire invitation (Hero, Portraits, Royal Seal, Loader, Blessings, Calendar, and Share Dialog).
+- **📂 Dynamic Configuration (`config.json` & `config.js`)**: All names, dates, events, venues, descriptions, and greetings are decoupled from HTML.
+- **🌐 100% Offline & Online Compatibility**: Works seamlessly both when double-clicked directly from your file system (`file:///`) and when served over HTTP/HTTPS (Vercel, local server).
 - **🚪 Royal Gate Opening Ceremony**: Interactive royal palace doors with gold latches that part open on tap/click with smooth entrance choreography.
 - **🎨 Gond Art & Traditional Motifs**: 100% procedural vector SVG artwork including:
   - Sacred Tree of Life with Peacocks and Lovebirds
@@ -29,55 +31,53 @@ This repository is a faithful replication of [kunika-navneet-wedding-card.vercel
 
 ---
 
-## 🚀 Quick Start (Run Locally)
+## 🚀 Quick Start (Run & Preview)
 
-You can run this project locally without installing Node.js or any build tools.
+### Option 1: Direct File Open (Offline)
+Simply double-click [`index.html`](index.html) to open in your favorite web browser. Thanks to the `<script src="config.js">` bridge, your customized details will load without local file CORS blocking.
 
-### Option 1: Using Python's Local Server (Recommended)
+### Option 2: Using Python's Local Server
 Run in your terminal from this folder:
 
 ```bash
 python -m http.server 3000
 ```
 
-Then open [http://localhost:3000](http://localhost:3000) in your browser. Any edits you make to `config.json` will instantly reflect when you refresh the page!
-
-### Option 2: Open Directly in Browser
-You can also double-click [`index.html`](index.html). The app includes an embedded fallback configuration so it renders even if local file fetching (`file:///`) is restricted by the browser.
+Then open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ---
 
-## 🛠️ Dynamic Configuration (`config.json`)
+## 🛠️ Customizing Details
 
-To customize the wedding invitation, simply edit [`config.json`](config.json). **No need to touch the HTML!**
+You can edit your wedding details in either [`config.json`](config.json) (for web hosting / Vercel) or [`config.js`](config.js) (for local offline opening).
 
 ```json
 {
   "meta": {
-    "title": "Anjali & Mridul · Shubh Vivah",
-    "description": "You are invited to the wedding of Anjali & Mridul · 2–3 December 2026",
-    "ogTitle": "Anjali & Mridul · Shubh Vivah",
-    "ogDescription": "Haldi, Ring Ceremony, Sangeet, Phere, Baraat & Reception · 2–3 December 2026"
+    "title": "Mridul & Kunika · Shubh Vivah",
+    "description": "You are invited to the wedding of Mridul Raj & Kunika Singh · 2–3 December 2026"
   },
   "couple": {
-    "bride": {
-      "name": "Anjali",
-      "hindi": "अंजलि",
-      "role": "The Bride",
-      "portrait": ""
-    },
     "groom": {
-      "name": "Mridul",
-      "hindi": "मृदुल",
+      "name": "Mridul Raj",
+      "heroName": "Mridul",
+      "hindi": "मृदुल राज",
       "role": "The Groom",
       "portrait": ""
     },
-    "monogram": "A & M"
+    "bride": {
+      "name": "Kunika Singh",
+      "heroName": "Kunika",
+      "hindi": "कुनिका सिंह",
+      "role": "The Bride",
+      "portrait": ""
+    },
+    "monogram": "M & K"
   },
   "wedding": {
     "topBlessing": "॥ जय जिनेन्द्र ॥",
     "subBlessing": "॥ शुभ विवाह ॥",
-    "sealMantra": "SHUBH VIVAH ✦ ANJALI & MRIDUL ✦ 2 & 3 DECEMBER 2026 ✦",
+    "sealMantra": "SHUBH VIVAH ✦ MRIDUL & KUNIKA ✦ 2 & 3 DECEMBER 2026 ✦",
     "sealTap": "Tap to open",
     "gateInviteHi": "आप सादर आमंत्रित हैं",
     "gateInviteEn": "You are cordially invited",
@@ -103,47 +103,19 @@ To customize the wedding invitation, simply edit [`config.json`](config.json). *
     "mapUrl": "https://maps.app.goo.gl/imVwWHP4Yv332h2F8"
   },
   "days": [
-    {
-      "iso": "20261202",
-      "num": "02",
-      "month": "December",
-      "weekday": "Wednesday",
-      "label": "Day One",
-      "tabLabel": "Day One",
-      "tabSub": "Wed · 2 Dec",
-      "events": [
-        {
-          "icon": "haldi",
-          "when": "Afternoon",
-          "time": "",
-          "title": "Haldi",
-          "hindi": "हल्दी",
-          "accent": "#d98200",
-          "soft": "#fff0c9",
-          "desc": "A sunshine-soaked afternoon of turmeric, marigolds and laughter...",
-          "descHi": "हल्दी, गेंदे के फूलों और हँसी-ख़ुशी से भरी सुनहरी दोपहर...",
-          "dress": "Shades of yellow",
-          "venue": ""
-        }
-      ]
-    }
+    // Haldi, Ring Ceremony, Phere, Baraat & Reception details
   ],
   "blessings": {
     "sectionHindi": "आशीर्वाद",
     "sectionTitle": "With Love & Blessings",
     "lead": "Your presence and blessings will make our celebration complete.",
     "leadHi": "आपकी उपस्थिति और आशीर्वाद से हमारा उत्सव पूर्ण होगा।",
-    "signature": "Anjali & Mridul",
+    "signature": "Mridul & Kunika",
     "family": "with our families",
     "closingMantra": "॥ जय जिनेन्द्र ॥"
   }
 }
 ```
-
-### Custom Illustrations
-To use custom portrait artwork instead of the built-in Gond silhouettes:
-1. Place your PNG/JPG illustration files in this repository (e.g., `groom.png` and `bride.png`).
-2. Set `"portrait": "bride.png"` and `"portrait": "groom.png"` in [`config.json`](config.json).
 
 ---
 
@@ -152,21 +124,10 @@ To use custom portrait artwork instead of the built-in Gond silhouettes:
 1. Push your changes to GitHub:
    ```bash
    git add .
-   git commit -m "Configure wedding card"
+   git commit -m "Configure wedding card for Mridul & Kunika"
    git push origin main
    ```
 2. Log in to [Vercel](https://vercel.com/) and click **Add New > Project**.
 3. Import your repository.
 4. Leave all settings at default (**Other** preset, no build command).
 5. Click **Deploy**. Your wedding card will be live instantly!
-
----
-
-## 📱 Tech Stack
-
-- **Dynamic JSON configuration (`config.json`)**
-- **HTML5 & Vanilla JavaScript**
-- **Custom CSS3** (Mobile-first, responsive paper card theme)
-- **SVG / Vector Graphics** (Procedural Gond art)
-- **Framer Motion (`motion.js`)** for spring animations and scroll choreography
-- **Google Fonts**: Cormorant Garamond, Jost, Yatra One, Noto Serif Devanagari
