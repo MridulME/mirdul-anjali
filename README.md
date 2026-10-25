@@ -2,31 +2,34 @@
 
 A luxury, interactive digital Indian wedding card web application inspired by traditional royal aesthetics and Gond folk art.
 
-This repository is a faithful replication of [kunika-navneet-wedding-card.vercel.app](https://kunika-navneet-wedding-card.vercel.app/), customized for **Mridul & Kunika** with the **Groom details positioned first**, and upgraded with a **dynamic configuration system** (`config.json` & `config.js`).
+This repository is customized for **Mridul & Kunika** with the **Groom details positioned first**, and upgraded with a **dynamic configuration system** (`config.json` & `config.js`) supporting multi-day celebrations:
+- **Day 1**: Haldi Ceremony
+- **Day 2**: Mehandi & Sangeet Night
+- **Day 3**: Shaadi & Phere (Wedding Ceremony)
+- **Day 5**: Grand Wedding Reception
 
 ---
 
 ## ✨ Features
 
 - **🤵 Groom Details First**: Mridul Raj & Kunika Singh. Groom's name and illustrated portrait are positioned first throughout the entire invitation (Hero, Portraits, Royal Seal, Loader, Blessings, Calendar, and Share Dialog).
+- **📅 4-Function Itinerary Timeline**:
+  - **Day 1**: Haldi Ceremony (Morning & Afternoon)
+  - **Day 2**: Mehandi & Sangeet Night (Evening)
+  - **Day 3**: Shaadi & Phere (Auspicious Wedding Muhurat)
+  - **Day 5**: Grand Wedding Reception (Royal Banquet)
+  - Interactive multi-tab switcher with spring physics pill animation
+  - Bilingual English and Hindi descriptions
+  - Color-coded ceremony badges with custom vector SVG icons (including dedicated henna mandala for Mehandi)
 - **📂 Dynamic Configuration (`config.json` & `config.js`)**: All names, dates, events, venues, descriptions, and greetings are decoupled from HTML.
 - **🌐 100% Offline & Online Compatibility**: Works seamlessly both when double-clicked directly from your file system (`file:///`) and when served over HTTP/HTTPS (Vercel, local server).
 - **🚪 Royal Gate Opening Ceremony**: Interactive royal palace doors with gold latches that part open on tap/click with smooth entrance choreography.
-- **🎨 Gond Art & Traditional Motifs**: 100% procedural vector SVG artwork including:
-  - Sacred Tree of Life with Peacocks and Lovebirds
-  - Gond Rosettes, Floral Halos, and Jharokha Arches
-  - Traditional Mango-Leaf & Marigold Toran
-  - Sacred Mangal Kalash
+- **🎨 Gond Art & Traditional Motifs**: 100% procedural vector SVG artwork (Tree of Life, Peacocks, Rosettes, Toran, Kalash).
 - **🌸 Ambient Falling Petals**: Floating golden marigold petals drifting down the invitation.
 - **⏳ Live Countdown Timer**: Animated Gond sun-dial counting down days, hours, minutes, and seconds in real-time.
-- **📅 Interactive Itinerary**:
-  - Filterable by day (Day One / Day Two)
-  - Bilingual descriptions (English & Hindi)
-  - Color-coded ceremony badges (Haldi, Ring Ceremony & Sangeet, Phere, Baraat & Reception)
-  - Dress code recommendations
-- **🗓️ 1-Click "Add to Calendar"**: Generates a standard `.ics` iCalendar file on the fly with all wedding events.
+- **🗓️ 1-Click "Add to Calendar"**: Generates a standard `.ics` iCalendar file for all 4 wedding events.
 - **📍 Venue & Navigation**: Embedded venue card with one-tap Google Maps directions.
-- **💌 Shareable**: Integrated with the Web Share API (native mobile share sheet) and a copy-to-clipboard fallback with toast notifications.
+- **💌 Shareable**: Integrated with the Web Share API and a copy-to-clipboard fallback with toast notifications.
 - **⚡ Zero Build Dependencies**: Pure HTML5, CSS3, and Vanilla JavaScript with Framer Motion (`motion.js`) loaded via CDN. No compilation or node_modules required.
 
 ---
@@ -34,7 +37,7 @@ This repository is a faithful replication of [kunika-navneet-wedding-card.vercel
 ## 🚀 Quick Start (Run & Preview)
 
 ### Option 1: Direct File Open (Offline)
-Simply double-click [`index.html`](index.html) to open in your favorite web browser. Thanks to the `<script src="config.js">` bridge, your customized details will load without local file CORS blocking.
+Simply double-click [`index.html`](index.html) to open in your favorite web browser. Thanks to the `<script src="config.js">` bridge, all your customized details will load without local file CORS blocking.
 
 ### Option 2: Using Python's Local Server
 Run in your terminal from this folder:
@@ -49,13 +52,13 @@ Then open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ## 🛠️ Customizing Details
 
-You can edit your wedding details in either [`config.json`](config.json) (for web hosting / Vercel) or [`config.js`](config.js) (for local offline opening).
+You can edit your wedding details in either [`config.json`](config.json) (for web hosting / Vercel) or [`config.js`](config.js) (for local offline opening). Both files stay in sync.
 
 ```json
 {
   "meta": {
     "title": "Mridul & Kunika · Shubh Vivah",
-    "description": "You are invited to the wedding of Mridul Raj & Kunika Singh · 2–3 December 2026"
+    "description": "You are invited to the wedding celebrations of Mridul Raj & Kunika Singh · 2–6 December 2026"
   },
   "couple": {
     "groom": {
@@ -77,24 +80,24 @@ You can edit your wedding details in either [`config.json`](config.json) (for we
   "wedding": {
     "topBlessing": "॥ जय जिनेन्द्र ॥",
     "subBlessing": "॥ शुभ विवाह ॥",
-    "sealMantra": "SHUBH VIVAH ✦ MRIDUL & KUNIKA ✦ 2 & 3 DECEMBER 2026 ✦",
+    "sealMantra": "SHUBH VIVAH ✦ MRIDUL & KUNIKA ✦ 2 – 6 DECEMBER 2026 ✦",
     "sealTap": "Tap to open",
     "gateInviteHi": "आप सादर आमंत्रित हैं",
     "gateInviteEn": "You are cordially invited",
-    "gateDate": "2 – 3 December 2026",
+    "gateDate": "2 – 6 December 2026",
     "eyebrow": "Together with their families",
     "invitationLine": "request the honour of your presence as they begin their forever",
     "dates": {
-      "ariaLabel": "Wednesday 2 and Thursday 3 December 2026",
+      "ariaLabel": "Wednesday 2 to Sunday 6 December 2026",
       "startDay": "Wed",
       "startDate": "02",
-      "endDay": "Thu",
-      "endDate": "03",
+      "endDay": "Sun",
+      "endDate": "06",
       "monthYear": "December 2026"
     }
   },
   "countdown": {
-    "target": "2026-12-02T12:00:00+05:30",
+    "target": "2026-12-02T11:00:00+05:30",
     "note": "until the haldi begins · Wednesday, 2 December"
   },
   "venue": {
@@ -103,17 +106,8 @@ You can edit your wedding details in either [`config.json`](config.json) (for we
     "mapUrl": "https://maps.app.goo.gl/imVwWHP4Yv332h2F8"
   },
   "days": [
-    // Haldi, Ring Ceremony, Phere, Baraat & Reception details
-  ],
-  "blessings": {
-    "sectionHindi": "आशीर्वाद",
-    "sectionTitle": "With Love & Blessings",
-    "lead": "Your presence and blessings will make our celebration complete.",
-    "leadHi": "आपकी उपस्थिति और आशीर्वाद से हमारा उत्सव पूर्ण होगा।",
-    "signature": "Mridul & Kunika",
-    "family": "with our families",
-    "closingMantra": "॥ जय जिनेन्द्र ॥"
-  }
+    // Day 1: Haldi, Day 2: Mehandi, Day 3: Shaadi, Day 5: Reception
+  ]
 }
 ```
 
@@ -124,7 +118,7 @@ You can edit your wedding details in either [`config.json`](config.json) (for we
 1. Push your changes to GitHub:
    ```bash
    git add .
-   git commit -m "Configure wedding card for Mridul & Kunika"
+   git commit -m "Add 4-day wedding functions: Haldi, Mehandi, Shaadi, Reception"
    git push origin main
    ```
 2. Log in to [Vercel](https://vercel.com/) and click **Add New > Project**.

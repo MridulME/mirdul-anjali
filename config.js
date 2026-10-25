@@ -1,9 +1,9 @@
 window.CONFIG = {
   "meta": {
     "title": "Mridul & Kunika · Shubh Vivah",
-    "description": "You are invited to the wedding of Mridul Raj & Kunika Singh · 2–3 December 2026",
+    "description": "You are invited to the wedding celebrations of Mridul Raj & Kunika Singh · 2–6 December 2026",
     "ogTitle": "Mridul & Kunika · Shubh Vivah",
-    "ogDescription": "Haldi, Ring Ceremony, Sangeet, Phere, Baraat & Reception · 2–3 December 2026"
+    "ogDescription": "Haldi, Mehandi, Shaadi & Reception · 2–6 December 2026"
   },
   "couple": {
     "groom": {
@@ -25,24 +25,25 @@ window.CONFIG = {
   "wedding": {
     "topBlessing": "॥ जय जिनेन्द्र ॥",
     "subBlessing": "॥ शुभ विवाह ॥",
-    "sealMantra": "SHUBH VIVAH ✦ MRIDUL & KUNIKA ✦ 2 & 3 DECEMBER 2026 ✦",
+    "sealMantra": "SHUBH VIVAH ✦ MRIDUL & KUNIKA ✦ 2 – 6 DECEMBER 2026 ✦",
     "sealTap": "Tap to open",
     "gateInviteHi": "आप सादर आमंत्रित हैं",
     "gateInviteEn": "You are cordially invited",
-    "gateDate": "2 – 3 December 2026",
+    "gateDate": "2 – 6 December 2026",
     "eyebrow": "Together with their families",
     "invitationLine": "request the honour of your presence as they begin their forever",
+    "eventsIntro": "Four joyous days of colour, music, traditions and blessings. We would love for you to be there for every moment.",
     "dates": {
-      "ariaLabel": "Wednesday 2 and Thursday 3 December 2026",
+      "ariaLabel": "Wednesday 2 to Sunday 6 December 2026",
       "startDay": "Wed",
       "startDate": "02",
-      "endDay": "Thu",
-      "endDate": "03",
+      "endDay": "Sun",
+      "endDate": "06",
       "monthYear": "December 2026"
     }
   },
   "countdown": {
-    "target": "2026-12-02T12:00:00+05:30",
+    "target": "2026-12-02T11:00:00+05:30",
     "note": "until the haldi begins · Wednesday, 2 December"
   },
   "venue": {
@@ -53,74 +54,96 @@ window.CONFIG = {
   "days": [
     {
       "iso": "20261202",
-      "num": "02",
+      "num": "01",
       "month": "December",
       "weekday": "Wednesday",
       "label": "Day One",
-      "tabLabel": "Day One",
-      "tabSub": "Wed · 2 Dec",
+      "tabLabel": "Day 1",
+      "tabSub": "Haldi",
       "events": [
         {
           "icon": "haldi",
-          "when": "Afternoon",
-          "time": "",
-          "title": "Haldi",
-          "hindi": "हल्दी",
+          "when": "Morning",
+          "time": "11:00 AM onwards",
+          "title": "Haldi Ceremony",
+          "hindi": "हल्दी की रस्म",
           "accent": "#d98200",
           "soft": "#fff0c9",
-          "desc": "A sunshine-soaked afternoon of turmeric, marigolds and laughter, as loved ones bless the couple with a golden glow.",
-          "descHi": "हल्दी, गेंदे के फूलों और हँसी-ख़ुशी से भरी सुनहरी दोपहर, जब अपने सब मिलकर वर-वधू को आशीर्वाद देंगे।",
-          "dress": "Shades of yellow",
-          "venue": ""
-        },
-        {
-          "icon": "rings",
-          "when": "Evening",
-          "time": "",
-          "title": "Ring Ceremony & Sangeet Night",
-          "hindi": "सगाई एवं संगीत संध्या",
-          "accent": "#c9356c",
-          "soft": "#fde2ec",
-          "desc": "Rings are exchanged under the evening lights, followed by a night of dhol, dance and music with everyone we love.",
-          "descHi": "शाम की जगमगाती रोशनी में अंगूठियों की रस्म, और फिर ढोल, नाच-गाने और संगीत से सजी यादगार रात।",
-          "dress": "Festive glam",
+          "desc": "A sunshine-soaked celebration of turmeric, fragrant marigolds, and joyous laughter as loved ones bless the couple with a golden glow.",
+          "descHi": "हल्दी, गेंदे के फूलों और हँसी-ख़ुशी से भरी पावन रस्म, जब सभी प्रियजन मिलकर वर-वधू को शुभ आशीर्वाद व स्नेह देंगे।",
+          "dress": "Shades of Yellow",
           "venue": ""
         }
       ]
     },
     {
       "iso": "20261203",
-      "num": "03",
+      "num": "02",
       "month": "December",
       "weekday": "Thursday",
       "label": "Day Two",
-      "tabLabel": "Day Two",
-      "tabSub": "Thu · 3 Dec",
+      "tabLabel": "Day 2",
+      "tabSub": "Mehandi",
+      "events": [
+        {
+          "icon": "mehandi",
+          "when": "Evening",
+          "time": "05:00 PM onwards",
+          "title": "Mehandi & Sangeet Night",
+          "hindi": "मेहंदी एवं संगीत संध्या",
+          "accent": "#13877a",
+          "soft": "#d8f0ea",
+          "desc": "An enchanting evening of intricate henna artistry, foot-tapping beats of the dhol, dance performances, and musical celebration with family and friends.",
+          "descHi": "हाथों में रचने वाली मेहंदी के रंगों, ढोल की थाप, मधुर संगीत और अपनों के संग झूमते-गाते जश्न की एक हसीन व यादगार शाम।",
+          "dress": "Festive Green & Traditional Glam",
+          "venue": ""
+        }
+      ]
+    },
+    {
+      "iso": "20261204",
+      "num": "03",
+      "month": "December",
+      "weekday": "Friday",
+      "label": "Day Three",
+      "tabLabel": "Day 3",
+      "tabSub": "Shaadi",
       "events": [
         {
           "icon": "fire",
-          "when": "Afternoon",
-          "time": "",
-          "title": "Phere",
-          "hindi": "फेरे",
+          "when": "Evening",
+          "time": "07:00 PM onwards",
+          "title": "Shaadi & Phere (Wedding)",
+          "hindi": "शुभ विवाह एवं सात फेरे",
           "accent": "#c4321a",
           "soft": "#fde0d6",
-          "desc": "The sacred union: vows taken around the holy fire, sealed with the blessings of elders and the divine.",
-          "descHi": "पवित्र अग्नि के साक्षी में फेरों का पावन बंधन, बड़ों और ईश्वर के आशीर्वाद के संग।",
-          "dress": "Traditional finery",
+          "desc": "The sacred union: holy vows taken around the sacred fire, sealed with Vedic rituals, blessings of the elders and the divine.",
+          "descHi": "पवित्र अग्नि के साक्षी में सात फेरों का पावन बंधन, वैदिक मंत्रोच्चार और बड़ों व ईश्वर के मंगल आशीर्वाद के साथ नवजीवन का शुभारंभ।",
+          "dress": "Royal Indian Ethnic & Traditional Finery",
           "venue": ""
-        },
+        }
+      ]
+    },
+    {
+      "iso": "20261206",
+      "num": "05",
+      "month": "December",
+      "weekday": "Sunday",
+      "label": "Day Five",
+      "tabLabel": "Day 5",
+      "tabSub": "Reception",
+      "events": [
         {
           "icon": "baraat",
           "when": "Evening",
-          "time": "",
-          "title": "Baraat & Reception",
-          "hindi": "बारात एवं स्वागत समारोह",
-          "accent": "#0f7d70",
-          "soft": "#d8f0ea",
-          "desc": "The baraat dances in to the beat of the dhol and the call of the shehnai, followed by a royal evening of celebration.",
-          "descHi": "ढोल की थाप और शहनाई की गूंज के साथ बारात का आगमन, फिर स्वागत समारोह की शाही शाम।",
-          "dress": "Royal evening wear",
+          "time": "07:30 PM onwards",
+          "title": "Grand Wedding Reception",
+          "hindi": "भव्य स्वागत समारोह एवं प्रीतिभोज",
+          "accent": "#6b1028",
+          "soft": "#f9e6ec",
+          "desc": "A royal evening of felicitations, fine dining, and joyous celebration welcoming the newly married couple as they begin their journey together.",
+          "descHi": "नवदम्पति के सम्मान में आयोजित एक भव्य एवं शाही शाम, स्वादिष्ट प्रीतिभोज और परिजनों व स्नेहीजनों के मंगल आशीर्वाद का उत्सव।",
+          "dress": "Royal Formal / Black Tie & Glam",
           "venue": ""
         }
       ]
