@@ -2,7 +2,7 @@
 window.CONFIG = {
   "meta": {
     "title": "Mridul & Kunika · Shubh Vivah",
-    "description": "You are invited to the wedding celebrations of Mridul Raj & Kunika Singh · 1–5 December 2026",
+    "description": "You are invited to the wedding celebrations of Mridul Raj & Kunika Jain · 1–5 December 2026",
     "ogTitle": "Mridul & Kunika · Shubh Vivah",
     "ogDescription": "Haldi, Mehandi, Shaadi & Reception · 1–5 December 2026"
   },
@@ -15,9 +15,9 @@ window.CONFIG = {
       "portrait": ""
     },
     "bride": {
-      "name": "Kunika Singh",
+      "name": "Kunika Jain",
       "heroName": "Kunika",
-      "hindi": "कुनिका सिंह",
+      "hindi": "कुनिका जैन",
       "role": "The Bride",
       "portrait": ""
     },

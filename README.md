@@ -12,7 +12,7 @@ This repository is customized for **Mridul & Kunika** with the **Groom details p
 
 ## ✨ Features
 
-- **🤵 Groom Details First**: Mridul Raj & Kunika Singh. Groom's name and illustrated portrait are positioned first throughout the entire invitation (Hero, Portraits, Royal Seal, Loader, Blessings, Calendar, and Share Dialog).
+- **🤵 Groom Details First**: Mridul Raj & Kunika Jain. Groom's name and illustrated portrait are positioned first throughout the entire invitation (Hero, Portraits, Royal Seal, Loader, Blessings, Calendar, and Share Dialog).
 - **📅 4-Function Itinerary Timeline**:
   - **Day 1 (Tue, 01 Dec)**: Haldi Ceremony (Morning & Afternoon)
   - **Day 2 (Wed, 02 Dec)**: Mehandi & Sangeet Night (Evening)
@@ -58,7 +58,7 @@ You can edit your wedding details in either [`config.json`](config.json) (for we
 {
   "meta": {
     "title": "Mridul & Kunika · Shubh Vivah",
-    "description": "You are invited to the wedding celebrations of Mridul Raj & Kunika Singh · 1–5 December 2026"
+    "description": "You are invited to the wedding celebrations of Mridul Raj & Kunika Jain · 1–5 December 2026"
   },
   "couple": {
     "groom": {
@@ -69,9 +69,9 @@ You can edit your wedding details in either [`config.json`](config.json) (for we
       "portrait": ""
     },
     "bride": {
-      "name": "Kunika Singh",
+      "name": "Kunika Jain",
       "heroName": "Kunika",
-      "hindi": "कुनिका सिंह",
+      "hindi": "कुनिका जैन",
       "role": "The Bride",
       "portrait": ""
     },
