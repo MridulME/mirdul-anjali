@@ -2,12 +2,13 @@
 
 A luxury, interactive digital Indian wedding card web application inspired by traditional royal aesthetics and Gond folk art.
 
-This repository is a faithful replication of [kunika-navneet-wedding-card.vercel.app](https://kunika-navneet-wedding-card.vercel.app/).
+This repository is a faithful replication of [kunika-navneet-wedding-card.vercel.app](https://kunika-navneet-wedding-card.vercel.app/), upgraded with a **dynamic JSON-driven configuration system** (`config.json`).
 
 ---
 
 ## ✨ Features
 
+- **📂 JSON-Driven Architecture**: All names, dates, events, venues, descriptions, and greetings are decoupled from HTML and loaded dynamically from [`config.json`](config.json).
 - **🚪 Royal Gate Opening Ceremony**: Interactive royal palace doors with gold latches that part open on tap/click with smooth entrance choreography.
 - **🎨 Gond Art & Traditional Motifs**: 100% procedural vector SVG artwork including:
   - Sacred Tree of Life with Peacocks and Lovebirds
@@ -24,110 +25,148 @@ This repository is a faithful replication of [kunika-navneet-wedding-card.vercel
 - **🗓️ 1-Click "Add to Calendar"**: Generates a standard `.ics` iCalendar file on the fly with all wedding events.
 - **📍 Venue & Navigation**: Embedded venue card with one-tap Google Maps directions.
 - **💌 Shareable**: Integrated with the Web Share API (native mobile share sheet) and a copy-to-clipboard fallback with toast notifications.
-- **⚡ Zero Build Dependencies**: Built with pure HTML5, CSS3, and Vanilla JavaScript with Framer Motion (Motion library) loaded via CDN. No compilation or node_modules required.
+- **⚡ Zero Build Dependencies**: Pure HTML5, CSS3, and Vanilla JavaScript with Framer Motion (`motion.js`) loaded via CDN. No compilation or node_modules required.
 
 ---
 
 ## 🚀 Quick Start (Run Locally)
 
-You can run this project locally without installing Node.js or any package managers.
+You can run this project locally without installing Node.js or any build tools.
 
-### Option 1: Open Directly in Browser
-Simply double-click [`index.html`](index.html) or right-click and choose **Open with > Chrome / Edge / Firefox / Safari**.
-
-### Option 2: Using Python's Local Server
+### Option 1: Using Python's Local Server (Recommended)
 Run in your terminal from this folder:
 
 ```bash
 python -m http.server 3000
 ```
 
-Then open [http://localhost:3000](http://localhost:3000) in your browser.
+Then open [http://localhost:3000](http://localhost:3000) in your browser. Any edits you make to `config.json` will instantly reflect when you refresh the page!
+
+### Option 2: Open Directly in Browser
+You can also double-click [`index.html`](index.html). The app includes an embedded fallback configuration so it renders even if local file fetching (`file:///`) is restricted by the browser.
 
 ---
 
-## 🛠️ Customization Guide
+## 🛠️ Dynamic Configuration (`config.json`)
 
-You can easily adapt this wedding card for any couple (e.g. **Mridul & Anjali**).
+To customize the wedding invitation, simply edit [`config.json`](config.json). **No need to touch the HTML!**
 
-### 1. Update the `CONFIG` Object in `index.html`
-Open [`index.html`](index.html) and find the `CONFIG` block around line 697:
-
-```javascript
-const CONFIG = {
-  // Commissioned portrait illustrations (drop PNGs in folder and put filenames here)
-  portraits: { groom: '', bride: '' },
-
-  // Venue details
-  venue: {
-    name: 'Your Wedding Venue Name',
-    address: 'City, State, Country',
-    mapUrl: 'https://maps.app.goo.gl/...'
+```json
+{
+  "meta": {
+    "title": "Anjali & Mridul · Shubh Vivah",
+    "description": "You are invited to the wedding of Anjali & Mridul · 2–3 December 2026",
+    "ogTitle": "Anjali & Mridul · Shubh Vivah",
+    "ogDescription": "Haldi, Ring Ceremony, Sangeet, Phere, Baraat & Reception · 2–3 December 2026"
   },
-
-  // Countdown target date (ISO format with IST offset)
-  countdownTo: '2026-12-02T12:00:00+05:30',
-
-  // Days and events
-  days: [
+  "couple": {
+    "bride": {
+      "name": "Anjali",
+      "hindi": "अंजलि",
+      "role": "The Bride",
+      "portrait": ""
+    },
+    "groom": {
+      "name": "Mridul",
+      "hindi": "मृदुल",
+      "role": "The Groom",
+      "portrait": ""
+    },
+    "monogram": "A & M"
+  },
+  "wedding": {
+    "topBlessing": "॥ जय जिनेन्द्र ॥",
+    "subBlessing": "॥ शुभ विवाह ॥",
+    "sealMantra": "SHUBH VIVAH ✦ ANJALI & MRIDUL ✦ 2 & 3 DECEMBER 2026 ✦",
+    "sealTap": "Tap to open",
+    "gateInviteHi": "आप सादर आमंत्रित हैं",
+    "gateInviteEn": "You are cordially invited",
+    "gateDate": "2 – 3 December 2026",
+    "eyebrow": "Together with their families",
+    "invitationLine": "request the honour of your presence as they begin their forever",
+    "dates": {
+      "ariaLabel": "Wednesday 2 and Thursday 3 December 2026",
+      "startDay": "Wed",
+      "startDate": "02",
+      "endDay": "Thu",
+      "endDate": "03",
+      "monthYear": "December 2026"
+    }
+  },
+  "countdown": {
+    "target": "2026-12-02T12:00:00+05:30",
+    "note": "until the haldi begins · Wednesday, 2 December"
+  },
+  "venue": {
+    "name": "Krishnam Resort & Marriage Garden",
+    "address": "Damoh, Madhya Pradesh",
+    "mapUrl": "https://maps.app.goo.gl/imVwWHP4Yv332h2F8"
+  },
+  "days": [
     {
-      iso: '20261202',
-      num: '02',
-      month: 'December',
-      weekday: 'Wednesday',
-      label: 'Day One',
-      events: [
+      "iso": "20261202",
+      "num": "02",
+      "month": "December",
+      "weekday": "Wednesday",
+      "label": "Day One",
+      "tabLabel": "Day One",
+      "tabSub": "Wed · 2 Dec",
+      "events": [
         {
-          icon: 'haldi',
-          when: 'Afternoon',
-          time: '',
-          title: 'Haldi',
-          hindi: 'हल्दी',
-          accent: '#d98200',
-          soft: '#fff0c9',
-          desc: 'A sunshine-soaked afternoon of turmeric, marigolds and laughter...',
-          descHi: 'हल्दी, गेंदे के फूलों और हँसी-ख़ुशी से भरी सुनहरी दोपहर...',
-          dress: 'Shades of yellow',
-          venue: ''
-        },
-        // ... more events
+          "icon": "haldi",
+          "when": "Afternoon",
+          "time": "",
+          "title": "Haldi",
+          "hindi": "हल्दी",
+          "accent": "#d98200",
+          "soft": "#fff0c9",
+          "desc": "A sunshine-soaked afternoon of turmeric, marigolds and laughter...",
+          "descHi": "हल्दी, गेंदे के फूलों और हँसी-ख़ुशी से भरी सुनहरी दोपहर...",
+          "dress": "Shades of yellow",
+          "venue": ""
+        }
       ]
     }
-  ]
-};
+  ],
+  "blessings": {
+    "sectionHindi": "आशीर्वाद",
+    "sectionTitle": "With Love & Blessings",
+    "lead": "Your presence and blessings will make our celebration complete.",
+    "leadHi": "आपकी उपस्थिति और आशीर्वाद से हमारा उत्सव पूर्ण होगा।",
+    "signature": "Anjali & Mridul",
+    "family": "with our families",
+    "closingMantra": "॥ जय जिनेन्द्र ॥"
+  }
+}
 ```
 
-### 2. Update Names and Headers
-In [`index.html`](index.html), search and replace the couple's names:
-- `<title>` and `<meta>` tags in `<head>`
-- Rotating mantra ring text (`SHUBH VIVAH ✦ ...`)
-- Main Hero section `<h1>` (`.names`)
-- Portrait caption labels (`The Bride` / `The Groom`)
-- Closing blessing signature (`With Love & Blessings`)
+### Custom Illustrations
+To use custom portrait artwork instead of the built-in Gond silhouettes:
+1. Place your PNG/JPG illustration files in this repository (e.g., `groom.png` and `bride.png`).
+2. Set `"portrait": "bride.png"` and `"portrait": "groom.png"` in [`config.json`](config.json).
 
 ---
 
 ## 🚢 Deploying to Vercel
 
-This repository is already configured with [`vercel.json`](vercel.json) for instant deployment:
-
-1. Push this repository to GitHub:
+1. Push your changes to GitHub:
    ```bash
    git add .
-   git commit -m "Add wedding card web app"
+   git commit -m "Configure wedding card"
    git push origin main
    ```
 2. Log in to [Vercel](https://vercel.com/) and click **Add New > Project**.
-3. Import this repository (`mirdul-anjali` or your repo name).
-4. Leave all build settings at default (Framework Preset: **Other**, Build Command: empty).
-5. Click **Deploy**. Your wedding card will be live with a free `.vercel.app` domain!
+3. Import your repository.
+4. Leave all settings at default (**Other** preset, no build command).
+5. Click **Deploy**. Your wedding card will be live instantly!
 
 ---
 
 ## 📱 Tech Stack
 
+- **Dynamic JSON configuration (`config.json`)**
 - **HTML5 & Vanilla JavaScript**
 - **Custom CSS3** (Mobile-first, responsive paper card theme)
-- **SVG / Vector Graphics** (Lightweight procedural Gond artwork)
+- **SVG / Vector Graphics** (Procedural Gond art)
 - **Framer Motion (`motion.js`)** for spring animations and scroll choreography
 - **Google Fonts**: Cormorant Garamond, Jost, Yatra One, Noto Serif Devanagari

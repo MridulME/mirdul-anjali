@@ -406,8 +406,8 @@ a.venue-ico{display:grid}
     <circle r="46" fill="none" stroke="#e2ad4f" stroke-width="1" stroke-dasharray="0 5" stroke-linecap="round" opacity=".6"/>
   </svg>
   <div class="ld-text">
-    <span class="ld-hi">॥ शुभ विवाह ॥</span>
-    <span class="ld-names">Anjali &amp; Mridul</span>
+    <span class="ld-hi" id="ldHi"></span>
+    <span class="ld-names" id="ldNames"></span>
     <div class="ld-bar"><i id="ldBar"></i></div>
     <div class="ld-meta"><span class="ld-pct" id="ldPct">00%</span></div>
   </div>
@@ -421,18 +421,18 @@ a.venue-ico{display:grid}
   <div class="glow"></div>
   <div class="door l"><div class="arch"></div><div class="ros" data-rosette></div><span class="knock"></span><span class="edge"></span></div>
   <div class="door r"><div class="arch"></div><div class="ros" data-rosette></div><span class="knock"></span><span class="edge"></span></div>
-  <div class="gate-top">॥ जय जिनेन्द्र ॥</div>
+  <div class="gate-top" id="gateTop"></div>
   <button class="seal" id="openBtn" aria-label="Open the invitation">
     <svg class="seal-ring" viewBox="0 0 224 224" aria-hidden="true">
       <defs><path id="ringPath" d="M112 112 m-98 0 a98 98 0 1 1 196 0 a98 98 0 1 1 -196 0"/></defs>
-      <text><textPath href="#ringPath" textLength="610" lengthAdjust="spacing">SHUBH VIVAH ✦ ANJALI &amp; MRIDUL ✦ 2 &amp; 3 DECEMBER 2026 ✦</textPath></text>
+      <text><textPath id="sealTextPath" href="#ringPath" textLength="610" lengthAdjust="spacing"></textPath></text>
     </svg>
     <span class="seal-pulse"></span>
-    <span class="s-hi">शुभ विवाह</span>
-    <span class="s-mono">A<i>&amp;</i>M</span>
-    <span class="s-tap">Tap to open</span>
+    <span class="s-hi" id="sealHi"></span>
+    <span class="s-mono" id="sealMono"></span>
+    <span class="s-tap" id="sealTap"></span>
   </button>
-  <div class="gate-bot"><div class="gate-oval"><span class="go-hi">आप सादर आमंत्रित हैं</span><span class="go-en">You are cordially invited</span><span class="go-date">2 – 3 December 2026</span></div></div>
+  <div class="gate-bot"><div class="gate-oval"><span class="go-hi" id="gateInviteHi"></span><span class="go-en" id="gateInviteEn"></span><span class="go-date" id="gateDate"></span></div></div>
 </div>
 
 <canvas id="petals" aria-hidden="true"></canvas>
@@ -444,7 +444,7 @@ a.venue-ico{display:grid}
     <div class="dim"></div>
     <svg class="toran" id="toran" viewBox="0 0 400 58" aria-hidden="true"></svg>
     <svg class="ck a"><use href="#ck"/></svg><svg class="ck b"><use href="#ck"/></svg><svg class="ck c"><use href="#ck"/></svg><svg class="ck d"><use href="#ck"/></svg>
-    <p class="mantra fx">॥ जय जिनेन्द्र ॥</p>
+    <p class="mantra fx" id="heroMantra"></p>
     <div class="art-wrap" id="artWrap">
       <svg id="heroArt" class="hero-art fx" viewBox="0 0 400 470" role="img" aria-label="Gond-style tree of life with two peacocks">
         <g clip-path="url(#heroClip)">
@@ -471,16 +471,16 @@ a.venue-ico{display:grid}
       </svg>
     </div>
     <div class="hero-text" id="heroText">
-      <p class="eyebrow fx">Together with their families</p>
-      <h1 class="names" aria-label="Anjali and Mridul">
-        <span class="w" data-split>Anjali</span>
+      <p class="eyebrow fx" id="heroEyebrow"></p>
+      <h1 class="names" id="heroNames">
+        <span class="w" id="brideName" data-split></span>
         <span class="amp fx">&amp;</span>
-        <span class="w" data-split>Mridul</span>
+        <span class="w" id="groomName" data-split></span>
       </h1>
-      <p class="invite-line fx">request the honour of your presence as they begin their forever</p>
-      <div class="dateblock fx" aria-label="Wednesday 2 and Thursday 3 December 2026">
-        <div class="db-row"><span>Wed</span><b>02</b><em>&amp;</em><b>03</b><span>Thu</span></div>
-        <span class="db-y">December 2026</span>
+      <p class="invite-line fx" id="inviteLine"></p>
+      <div class="dateblock fx" id="dateBlock">
+        <div class="db-row" id="dbRow"></div>
+        <span class="db-y" id="dbYear"></span>
       </div>
     </div>
   </section>
@@ -548,7 +548,7 @@ a.venue-ico{display:grid}
             <path transform="translate(100 260) scale(.92) translate(-100 -260)" d="M4 260 V98 C4 46 58 28 82 16 C92 11 97 6 100 2 C103 6 108 11 118 16 C142 28 196 46 196 98 V260" fill="none" stroke="#f5d692" stroke-width="1.6" stroke-dasharray="0 5.5" stroke-linecap="round" opacity=".85"/>
           </svg>
         </div></div></div></div>
-        <figcaption><small>The Bride</small><strong>Anjali</strong><span>अंजलि</span></figcaption>
+        <figcaption><small id="brideRole"></small><strong id="brideCaption"></strong><span id="brideHindi"></span></figcaption>
       </figure>
 
       <!-- PORTRAIT PLACEHOLDER (Groom): set CONFIG.portraits.groom to your illustration file to replace this artwork -->
@@ -596,7 +596,7 @@ a.venue-ico{display:grid}
             <path transform="translate(100 260) scale(.92) translate(-100 -260)" d="M4 260 V98 C4 46 58 28 82 16 C92 11 97 6 100 2 C103 6 108 11 118 16 C142 28 196 46 196 98 V260" fill="none" stroke="#f5d692" stroke-width="1.6" stroke-dasharray="0 5.5" stroke-linecap="round" opacity=".85"/>
           </svg>
         </div></div></div></div>
-        <figcaption><small>The Groom</small><strong>Mridul</strong><span>मृदुल</span></figcaption>
+        <figcaption><small id="groomRole"></small><strong id="groomCaption"></strong><span id="groomHindi"></span></figcaption>
       </figure>
     </div>
 
@@ -637,11 +637,7 @@ a.venue-ico{display:grid}
       <svg class="orn"><use href="#orn"/></svg>
       <p>Two days of colour, music and blessings. We would love for you to be there for every moment.</p>
     </header>
-    <div class="seg" role="tablist" aria-label="Choose a day">
-      <span class="seg-pill" id="segPill"></span>
-      <button class="on" data-day="0" role="tab" aria-selected="true">Day One<small>Wed · 2 Dec</small></button>
-      <button data-day="1" role="tab" aria-selected="false">Day Two<small>Thu · 3 Dec</small></button>
-    </div>
+    <div class="seg" id="segTabs" role="tablist" aria-label="Choose a day"></div>
     <div id="days"></div>
   </section>
 
@@ -674,67 +670,180 @@ a.venue-ico{display:grid}
   <section id="blessings" class="sec paper closing">
     <svg class="kalash" id="kalash" data-r="kalash" viewBox="0 0 220 178" role="img" aria-label="Gond-style mangal kalash with two lovebirds"></svg>
     <div class="sh" data-r="up">
-      <div class="sh-eyebrow"><i></i><span class="hi">आशीर्वाद</span><i></i></div>
-      <h2>With Love &amp; Blessings</h2>
+      <div class="sh-eyebrow"><i></i><span class="hi" id="blessHindi"></span><i></i></div>
+      <h2 id="blessTitle"></h2>
       <svg class="orn"><use href="#orn"/></svg>
-      <p class="lead">Your presence and blessings will make our celebration complete.</p>
-      <p class="lead-hi">आपकी उपस्थिति और आशीर्वाद से हमारा उत्सव पूर्ण होगा।</p>
+      <p class="lead" id="blessLead"></p>
+      <p class="lead-hi" id="blessLeadHi"></p>
     </div>
     <div data-r="up" data-delay=".15">
-      <div class="sign">Anjali <i>&amp;</i> Mridul</div>
-      <p class="fam">with our families</p>
-      <p class="mantra">॥ जय जिनेन्द्र ॥</p>
+      <div class="sign" id="blessSign"></div>
+      <p class="fam" id="blessFam"></p>
+      <p class="mantra" id="blessMantra"></p>
     </div>
   </section>
 </main>
 
 <div class="toast" id="toast" role="status"></div>
 
+<script id="wedding-config-data" type="application/json">
+{
+  "meta": {
+    "title": "Anjali & Mridul · Shubh Vivah",
+    "description": "You are invited to the wedding of Anjali & Mridul · 2–3 December 2026",
+    "ogTitle": "Anjali & Mridul · Shubh Vivah",
+    "ogDescription": "Haldi, Ring Ceremony, Sangeet, Phere, Baraat & Reception · 2–3 December 2026"
+  },
+  "couple": {
+    "bride": {
+      "name": "Anjali",
+      "hindi": "अंजलि",
+      "role": "The Bride",
+      "portrait": ""
+    },
+    "groom": {
+      "name": "Mridul",
+      "hindi": "मृदुल",
+      "role": "The Groom",
+      "portrait": ""
+    },
+    "monogram": "A & M"
+  },
+  "wedding": {
+    "topBlessing": "॥ जय जिनेन्द्र ॥",
+    "subBlessing": "॥ शुभ विवाह ॥",
+    "sealMantra": "SHUBH VIVAH ✦ ANJALI & MRIDUL ✦ 2 & 3 DECEMBER 2026 ✦",
+    "sealTap": "Tap to open",
+    "gateInviteHi": "आप सादर आमंत्रित हैं",
+    "gateInviteEn": "You are cordially invited",
+    "gateDate": "2 – 3 December 2026",
+    "eyebrow": "Together with their families",
+    "invitationLine": "request the honour of your presence as they begin their forever",
+    "dates": {
+      "ariaLabel": "Wednesday 2 and Thursday 3 December 2026",
+      "startDay": "Wed",
+      "startDate": "02",
+      "endDay": "Thu",
+      "endDate": "03",
+      "monthYear": "December 2026"
+    }
+  },
+  "countdown": {
+    "target": "2026-12-02T12:00:00+05:30",
+    "note": "until the haldi begins · Wednesday, 2 December"
+  },
+  "venue": {
+    "name": "Krishnam Resort & Marriage Garden",
+    "address": "Damoh, Madhya Pradesh",
+    "mapUrl": "https://maps.app.goo.gl/imVwWHP4Yv332h2F8"
+  },
+  "days": [
+    {
+      "iso": "20261202",
+      "num": "02",
+      "month": "December",
+      "weekday": "Wednesday",
+      "label": "Day One",
+      "tabLabel": "Day One",
+      "tabSub": "Wed · 2 Dec",
+      "events": [
+        {
+          "icon": "haldi",
+          "when": "Afternoon",
+          "time": "",
+          "title": "Haldi",
+          "hindi": "हल्दी",
+          "accent": "#d98200",
+          "soft": "#fff0c9",
+          "desc": "A sunshine-soaked afternoon of turmeric, marigolds and laughter, as loved ones bless the couple with a golden glow.",
+          "descHi": "हल्दी, गेंदे के फूलों और हँसी-ख़ुशी से भरी सुनहरी दोपहर, जब अपने सब मिलकर वर-वधू को आशीर्वाद देंगे।",
+          "dress": "Shades of yellow",
+          "venue": ""
+        },
+        {
+          "icon": "rings",
+          "when": "Evening",
+          "time": "",
+          "title": "Ring Ceremony & Sangeet Night",
+          "hindi": "सगाई एवं संगीत संध्या",
+          "accent": "#c9356c",
+          "soft": "#fde2ec",
+          "desc": "Rings are exchanged under the evening lights, followed by a night of dhol, dance and music with everyone we love.",
+          "descHi": "शाम की जगमगाती रोशनी में अंगूठियों की रस्म, और फिर ढोल, नाच-गाने और संगीत से सजी यादगार रात।",
+          "dress": "Festive glam",
+          "venue": ""
+        }
+      ]
+    },
+    {
+      "iso": "20261203",
+      "num": "03",
+      "month": "December",
+      "weekday": "Thursday",
+      "label": "Day Two",
+      "tabLabel": "Day Two",
+      "tabSub": "Thu · 3 Dec",
+      "events": [
+        {
+          "icon": "fire",
+          "when": "Afternoon",
+          "time": "",
+          "title": "Phere",
+          "hindi": "फेरे",
+          "accent": "#c4321a",
+          "soft": "#fde0d6",
+          "desc": "The sacred union: vows taken around the holy fire, sealed with the blessings of elders and the divine.",
+          "descHi": "पवित्र अग्नि के साक्षी में फेरों का पावन बंधन, बड़ों और ईश्वर के आशीर्वाद के संग।",
+          "dress": "Traditional finery",
+          "venue": ""
+        },
+        {
+          "icon": "baraat",
+          "when": "Evening",
+          "time": "",
+          "title": "Baraat & Reception",
+          "hindi": "बारात एवं स्वागत समारोह",
+          "accent": "#0f7d70",
+          "soft": "#d8f0ea",
+          "desc": "The baraat dances in to the beat of the dhol and the call of the shehnai, followed by a royal evening of celebration.",
+          "descHi": "ढोल की थाप और शहनाई की गूंज के साथ बारात का आगमन, फिर स्वागत समारोह की शाही शाम।",
+          "dress": "Royal evening wear",
+          "venue": ""
+        }
+      ]
+    }
+  ],
+  "blessings": {
+    "sectionHindi": "आशीर्वाद",
+    "sectionTitle": "With Love & Blessings",
+    "lead": "Your presence and blessings will make our celebration complete.",
+    "leadHi": "आपकी उपस्थिति और आशीर्वाद से हमारा उत्सव पूर्ण होगा।",
+    "signature": "Anjali & Mridul",
+    "family": "with our families",
+    "closingMantra": "॥ जय जिनेन्द्र ॥"
+  }
+}
+
+</script>
+
 <script>
 /* =========================================================
-   EDIT YOUR DETAILS HERE
+   DYNAMIC CONFIG LOADER
+   Loads from config.json with fallback to embedded config
    ========================================================= */
-const CONFIG = {
-  // Portrait artwork. Leave '' to show the built-in Gond-style illustrations.
-  // To use commissioned illustrations (not photos), drop the files next to this page and
-  // set e.g. groom: 'mridul-illustration.png'. Best size: 600 × 780 px (portrait).
-  portraits: { groom: '', bride: '' },
-
-  // Main venue. Leave name empty to show "Venue details to follow".
-  venue: { name: 'Krishnam Resort & Marriage Garden', address: 'Damoh, Madhya Pradesh', mapUrl: 'https://maps.app.goo.gl/imVwWHP4Yv332h2F8' },
-
-  // Countdown target (IST)
-  countdownTo: '2026-12-02T12:00:00+05:30',
-
-  days: [
-    { iso: '20261202', num: '02', month: 'December', weekday: 'Wednesday', label: 'Day One',
-      events: [
-        { icon: 'haldi', when: 'Afternoon', time: '', title: 'Haldi', hindi: 'हल्दी',
-          accent: '#d98200', soft: '#fff0c9',
-          desc: 'A sunshine-soaked afternoon of turmeric, marigolds and laughter, as loved ones bless the couple with a golden glow.',
-          descHi: 'हल्दी, गेंदे के फूलों और हँसी-ख़ुशी से भरी सुनहरी दोपहर, जब अपने सब मिलकर वर-वधू को आशीर्वाद देंगे।',
-          dress: 'Shades of yellow', venue: '' },
-        { icon: 'rings', when: 'Evening', time: '', title: 'Ring Ceremony & Sangeet Night', hindi: 'सगाई एवं संगीत संध्या',
-          accent: '#c9356c', soft: '#fde2ec',
-          desc: 'Rings are exchanged under the evening lights, followed by a night of dhol, dance and music with everyone we love.',
-          descHi: 'शाम की जगमगाती रोशनी में अंगूठियों की रस्म, और फिर ढोल, नाच-गाने और संगीत से सजी यादगार रात।',
-          dress: 'Festive glam', venue: '' }
-      ] },
-    { iso: '20261203', num: '03', month: 'December', weekday: 'Thursday', label: 'Day Two',
-      events: [
-        { icon: 'fire', when: 'Afternoon', time: '', title: 'Phere', hindi: 'फेरे',
-          accent: '#c4321a', soft: '#fde0d6',
-          desc: 'The sacred union: vows taken around the holy fire, sealed with the blessings of elders and the divine.',
-          descHi: 'पवित्र अग्नि के साक्षी में फेरों का पावन बंधन, बड़ों और ईश्वर के आशीर्वाद के संग।',
-          dress: 'Traditional finery', venue: '' },
-        { icon: 'baraat', when: 'Evening', time: '', title: 'Baraat & Reception', hindi: 'बारात एवं स्वागत समारोह',
-          accent: '#0f7d70', soft: '#d8f0ea',
-          desc: 'The baraat dances in to the beat of the dhol and the call of the shehnai, followed by a royal evening of celebration.',
-          descHi: 'ढोल की थाप और शहनाई की गूंज के साथ बारात का आगमन, फिर स्वागत समारोह की शाही शाम।',
-          dress: 'Royal evening wear', venue: '' }
-      ] }
-  ]
-};
+async function loadConfig() {
+  try {
+    const res = await fetch('config.json');
+    if (res.ok) return await res.json();
+  } catch (e) {
+    console.info('Could not fetch config.json directly (e.g. running via file://). Using embedded fallback.', e);
+  }
+  const fallback = document.getElementById('wedding-config-data');
+  if (fallback) {
+    try { return JSON.parse(fallback.textContent); } catch (e) {}
+  }
+  return null;
+}
 
 /* ========================================================= */
 const $ = (s, r = document) => r.querySelector(s);
@@ -746,6 +855,151 @@ const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const HAS_M = document.documentElement.classList.contains('m');
 const M = window.Motion || {};
 const EASE = [0.22, 1, 0.36, 1];
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+
+/* ---------- Apply dynamic data to DOM ---------- */
+function applyDynamicData(c) {
+  if (!c) return;
+
+  // Metadata
+  if (c.meta) {
+    if (c.meta.title) document.title = c.meta.title;
+    const desc = $('meta[name="description"]');
+    if (desc && c.meta.description) desc.setAttribute('content', c.meta.description);
+    const ogT = $('meta[property="og:title"]');
+    if (ogT && (c.meta.ogTitle || c.meta.title)) ogT.setAttribute('content', c.meta.ogTitle || c.meta.title);
+    const ogD = $('meta[property="og:description"]');
+    if (ogD && (c.meta.ogDescription || c.meta.description)) ogD.setAttribute('content', c.meta.ogDescription || c.meta.description);
+  }
+
+  // Preloader
+  const ldNames = $('#ldNames');
+  if (ldNames && c.couple) ldNames.textContent = `${c.couple.bride.name} & ${c.couple.groom.name}`;
+  const ldHi = $('#ldHi');
+  if (ldHi && c.wedding?.subBlessing) ldHi.textContent = c.wedding.subBlessing;
+
+  // Gate
+  const gateTop = $('#gateTop');
+  if (gateTop && c.wedding?.topBlessing) gateTop.textContent = c.wedding.topBlessing;
+  const sealTextPath = $('#sealTextPath');
+  if (sealTextPath && c.wedding?.sealMantra) sealTextPath.textContent = c.wedding.sealMantra;
+  const sealHi = $('#sealHi');
+  if (sealHi && c.wedding?.subBlessing) sealHi.textContent = c.wedding.subBlessing.replace(/^[॥\s]+|[॥\s]+$/g, '');
+  const sealMono = $('#sealMono');
+  if (sealMono && c.couple?.monogram) {
+    sealMono.innerHTML = c.couple.monogram.includes('&')
+      ? c.couple.monogram.replace('&', '<i>&amp;</i>')
+      : c.couple.monogram;
+  }
+  const sealTap = $('#sealTap');
+  if (sealTap && c.wedding?.sealTap) sealTap.textContent = c.wedding.sealTap;
+
+  const gateInviteHi = $('#gateInviteHi');
+  if (gateInviteHi && c.wedding?.gateInviteHi) gateInviteHi.textContent = c.wedding.gateInviteHi;
+  const gateInviteEn = $('#gateInviteEn');
+  if (gateInviteEn && c.wedding?.gateInviteEn) gateInviteEn.textContent = c.wedding.gateInviteEn;
+  const gateDate = $('#gateDate');
+  if (gateDate && c.wedding?.gateDate) gateDate.textContent = c.wedding.gateDate;
+
+  // Hero Section
+  const heroMantra = $('#heroMantra');
+  if (heroMantra && c.wedding?.topBlessing) heroMantra.textContent = c.wedding.topBlessing;
+  const heroEyebrow = $('#heroEyebrow');
+  if (heroEyebrow && c.wedding?.eyebrow) heroEyebrow.textContent = c.wedding.eyebrow;
+
+  const heroNames = $('#heroNames');
+  if (heroNames && c.couple) {
+    heroNames.setAttribute('aria-label', `${c.couple.bride.name} and ${c.couple.groom.name}`);
+  }
+  const brideName = $('#brideName');
+  if (brideName && c.couple?.bride?.name) brideName.textContent = c.couple.bride.name;
+  const groomName = $('#groomName');
+  if (groomName && c.couple?.groom?.name) groomName.textContent = c.couple.groom.name;
+
+  const inviteLine = $('#inviteLine');
+  if (inviteLine && c.wedding?.invitationLine) inviteLine.textContent = c.wedding.invitationLine;
+
+  const dateBlock = $('#dateBlock');
+  if (dateBlock && c.wedding?.dates) {
+    if (c.wedding.dates.ariaLabel) dateBlock.setAttribute('aria-label', c.wedding.dates.ariaLabel);
+    const dbRow = $('#dbRow');
+    if (dbRow) {
+      dbRow.innerHTML = `<span>${c.wedding.dates.startDay}</span><b>${c.wedding.dates.startDate}</b><em>&amp;</em><b>${c.wedding.dates.endDate}</b><span>${c.wedding.dates.endDay}</span>`;
+    }
+    const dbYear = $('#dbYear');
+    if (dbYear) dbYear.textContent = c.wedding.dates.monthYear;
+  }
+
+  // Couple Section
+  if (c.couple) {
+    const brideRole = $('#brideRole');
+    if (brideRole && c.couple.bride.role) brideRole.textContent = c.couple.bride.role;
+    const brideCaption = $('#brideCaption');
+    if (brideCaption && c.couple.bride.name) brideCaption.textContent = c.couple.bride.name;
+    const brideHindi = $('#brideHindi');
+    if (brideHindi && c.couple.bride.hindi) brideHindi.textContent = c.couple.bride.hindi;
+    const artBride = $('#art-bride');
+    if (artBride) artBride.setAttribute('aria-label', `Illustrated portrait of the bride, ${c.couple.bride.name}`);
+    if (c.couple.bride.portrait) {
+      const fig = $('#art-bride .figure');
+      if (fig) fig.innerHTML = `<image href="${c.couple.bride.portrait}" x="0" y="0" width="200" height="260" preserveAspectRatio="xMidYMid slice"/>`;
+    }
+
+    const groomRole = $('#groomRole');
+    if (groomRole && c.couple.groom.role) groomRole.textContent = c.couple.groom.role;
+    const groomCaption = $('#groomCaption');
+    if (groomCaption && c.couple.groom.name) groomCaption.textContent = c.couple.groom.name;
+    const groomHindi = $('#groomHindi');
+    if (groomHindi && c.couple.groom.hindi) groomHindi.textContent = c.couple.groom.hindi;
+    const artGroom = $('#art-groom');
+    if (artGroom) artGroom.setAttribute('aria-label', `Illustrated portrait of the groom, ${c.couple.groom.name}`);
+    if (c.couple.groom.portrait) {
+      const fig = $('#art-groom .figure');
+      if (fig) fig.innerHTML = `<image href="${c.couple.groom.portrait}" x="0" y="0" width="200" height="260" preserveAspectRatio="xMidYMid slice"/>`;
+    }
+  }
+
+  // Countdown Note
+  const cdNote = $('#cdNote');
+  if (cdNote && c.countdown?.note) cdNote.textContent = c.countdown.note;
+
+  // Venue Section
+  if (c.venue) {
+    const vName = $('#venueName');
+    const vAddr = $('#venueAddr');
+    if (vName) vName.textContent = c.venue.name || 'Venue details to follow';
+    if (vAddr) vAddr.textContent = c.venue.address || 'We will share the venue and timings with you soon. Until then, please save both dates.';
+    if (c.venue.mapUrl) {
+      const mapBtn = $('#mapBtn');
+      const venuePin = $('#venuePin');
+      if (mapBtn) { mapBtn.href = c.venue.mapUrl; mapBtn.hidden = false; }
+      if (venuePin) venuePin.href = c.venue.mapUrl;
+      if (vName) vName.href = c.venue.mapUrl;
+    }
+  }
+
+  // Blessings Section
+  if (c.blessings) {
+    const blessHindi = $('#blessHindi');
+    if (blessHindi && c.blessings.sectionHindi) blessHindi.textContent = c.blessings.sectionHindi;
+    const blessTitle = $('#blessTitle');
+    if (blessTitle && c.blessings.sectionTitle) blessTitle.textContent = c.blessings.sectionTitle;
+    const blessLead = $('#blessLead');
+    if (blessLead && c.blessings.lead) blessLead.textContent = c.blessings.lead;
+    const blessLeadHi = $('#blessLeadHi');
+    if (blessLeadHi && c.blessings.leadHi) blessLeadHi.textContent = c.blessings.leadHi;
+    const blessSign = $('#blessSign');
+    if (blessSign && c.blessings.signature) {
+      blessSign.innerHTML = c.blessings.signature.includes('&')
+        ? c.blessings.signature.replace('&', '<i>&amp;</i>')
+        : c.blessings.signature;
+    }
+    const blessFam = $('#blessFam');
+    if (blessFam && c.blessings.family) blessFam.textContent = c.blessings.family;
+    const blessMantra = $('#blessMantra');
+    if (blessMantra && c.blessings.closingMantra) blessMantra.textContent = c.blessings.closingMantra;
+  }
+}
 
 /* ---------- Gond rosette ---------- */
 function rosetteG() {
@@ -763,33 +1017,28 @@ function rosetteG() {
   s += `<circle r="8" fill="#f4a10e" stroke="${K}" stroke-width="1.2"/><circle r="8" fill="url(#pDotK)"/><circle r="3.4" fill="#d63a1f" stroke="${K}" stroke-width="1"/>`;
   return s;
 }
-$$('[data-rosette]').forEach(el => {
-  el.innerHTML = `<svg viewBox="-50 -50 100 100" aria-hidden="true" style="width:100%;height:100%;display:block"><g class="spin">${rosetteG()}</g></svg>`;
-});
-$('#bloom').innerHTML = `<g transform="scale(.48)">${rosetteG()}</g>`;
+function initRosettesAndHalos() {
+  $$('[data-rosette]').forEach(el => {
+    el.innerHTML = `<svg viewBox="-50 -50 100 100" aria-hidden="true" style="width:100%;height:100%;display:block"><g class="spin">${rosetteG()}</g></svg>`;
+  });
+  const bloom = $('#bloom');
+  if (bloom) bloom.innerHTML = `<g transform="scale(.48)">${rosetteG()}</g>`;
 
-/* ---------- Portrait halos ---------- */
-$$('[data-halo]').forEach(g => {
-  const [c1, c2] = g.dataset.halo.split(',');
-  let s = '';
-  for (let i = 0; i < 24; i++) s += `<path transform="rotate(${i * 15})" d="M-6 -52 L6 -52 L0 -80Z" fill="${i % 2 ? c2 : c1}" stroke="${K}" stroke-width="1"/>`;
-  for (let i = 0; i < 30; i++) { const a = i * 12 * Math.PI / 180; s += `<circle cx="${(86 * Math.cos(a)).toFixed(1)}" cy="${(86 * Math.sin(a)).toFixed(1)}" r="2" fill="${c1}"/>`; }
-  s += `<circle r="50" fill="none" stroke="${c1}" stroke-width="2" stroke-dasharray="0 6" stroke-linecap="round"/>`;
-  g.innerHTML = s;
-});
-
-/* ---------- Optional illustration swap ---------- */
-['groom', 'bride'].forEach(k => {
-  const src = CONFIG.portraits[k];
-  if (!src) return;
-  $(`#art-${k} .figure`).innerHTML = `<image href="${src}" x="0" y="0" width="200" height="260" preserveAspectRatio="xMidYMid slice"/>`;
-});
+  $$('[data-halo]').forEach(g => {
+    const [c1, c2] = g.dataset.halo.split(',');
+    let s = '';
+    for (let i = 0; i < 24; i++) s += `<path transform="rotate(${i * 15})" d="M-6 -52 L6 -52 L0 -80Z" fill="${i % 2 ? c2 : c1}" stroke="${K}" stroke-width="1"/>`;
+    for (let i = 0; i < 30; i++) { const a = i * 12 * Math.PI / 180; s += `<circle cx="${(86 * Math.cos(a)).toFixed(1)}" cy="${(86 * Math.sin(a)).toFixed(1)}" r="2" fill="${c1}"/>`; }
+    s += `<circle r="50" fill="none" stroke="${c1}" stroke-width="2" stroke-dasharray="0 6" stroke-linecap="round"/>`;
+    g.innerHTML = s;
+  });
+}
 
 /* ---------- Hero: tree of life, peacocks, birds ---------- */
-(function buildHero() {
+function buildHero() {
   const cx = 200, cy = 222;
   let sky = '';
-  for (let i = 0; i < 34; i++) {
+  for (let i = 0; i < 48; i++) {
     const x = 36 + Math.random() * 328, y = 20 + Math.random() * 400;
     sky += `<circle class="star" cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${(Math.random() * 1.3 + .6).toFixed(2)}" fill="#f5d692" style="animation-delay:${(Math.random() * 3).toFixed(2)}s"/>`;
   }
@@ -854,11 +1103,10 @@ $$('[data-halo]').forEach(g => {
   };
   window.peacockSVG = peacock;
   $('#peacocks').innerHTML = `<g transform="translate(128 454)">${peacock()}</g><g transform="translate(272 454) scale(-1 1)">${peacock()}</g>`;
-})();
-
+}
 
 /* ---------- Toran (marigold & mango-leaf door garland) ---------- */
-(function buildToran() {
+function buildToran() {
   const anchors = [0, 100, 200, 300, 400];
   let out = `<path d="M0 3 H400" stroke="#6b1028" stroke-width="2.4"/>`;
   for (let i = 0; i < 4; i++) {
@@ -880,19 +1128,19 @@ $$('[data-halo]').forEach(g => {
     out += `<circle cx="${x}" cy="5" r="4.4" fill="#d63a1f" stroke="${K}" stroke-width=".8"/></g>`;
   });
   $('#toran').innerHTML = out;
-})();
+}
 
 /* ---------- Countdown sun-dial ---------- */
-(function buildDial() {
+function buildDial() {
   const cols = ['#f4a10e', '#d63a1f', '#13877a', '#e2477b'];
   let s = `<circle r="104" fill="none" stroke="#e2ad4f" stroke-width="1.2"/><circle r="166" fill="none" stroke="#e2ad4f" stroke-width="1.6" stroke-dasharray="0 7" stroke-linecap="round"/>`;
   for (let i = 0; i < 36; i++) s += `<path transform="rotate(${i * 10})" d="M-7 -110 L7 -110 L0 -${i % 3 ? 140 : 156}Z" fill="${cols[i % 4]}" stroke="${K}" stroke-width="1"/>`;
   for (let i = 0; i < 12; i++) { const a = i * 30 * Math.PI / 180; s += `<circle cx="${(92 * Math.cos(a)).toFixed(1)}" cy="${(92 * Math.sin(a)).toFixed(1)}" r="${i % 3 ? 2.4 : 4.2}" fill="#f5d692"/>`; }
   $('#cdDial').innerHTML = s;
-})();
+}
 
 /* ---------- Closing: mangal kalash with lovebirds ---------- */
-(function buildKalash() {
+function buildKalash() {
   const parrot = () => `<g class="k-bob">
     <path d="M-10 -8 L-34 14 L-27 16 L-6 -2Z" fill="#13877a" stroke="${K}" stroke-width="1"/>
     <path d="M-8 -6 L-26 21 L-19 21 L-3 -2Z" fill="#f4a10e" stroke="${K}" stroke-width="1"/>
@@ -907,11 +1155,13 @@ $$('[data-halo]').forEach(g => {
     <path d="M-2 -6 L-3 0 M4 -6 L4 0" stroke="#f4a10e" stroke-width="1.8" stroke-linecap="round"/></g>`;
   const vine = (flip) => {
     const leaves = [[22, 158, -40], [32, 146, 30], [40, 136, -50]].map(([x, y, r], i) => `<g transform="translate(${x} ${y}) rotate(${r}) scale(.42)"><path d="${LEAF}" fill="${i % 2 ? '#6aa632' : '#2f9a4c'}" stroke="${K}" stroke-width="2"/><path d="${LEAF}" fill="url(#pDotK)"/></g>`).join('');
-    return `<g class="k-vine"><g ${flip ? 'transform="translate(220 0) scale(-1 1)"' : ''}><path d="M4 174 C18 166 30 150 50 130" stroke="#7a3e1d" stroke-width="2.6" fill="none" stroke-linecap="round"/>${leaves}<circle cx="16" cy="166" r="3.6" fill="#e2477b" stroke="${K}" stroke-width=".8"/><circle cx="16" cy="166" r="1.4" fill="#f5d692"/></g></g>`;
+    return `<g class="k-vine"><g transform="${flip ? 'translate(220 0) scale(-1 1)' : ''}">
+      <path d="M12 170 C14 140 38 136 42 120 C44 112 36 104 28 108" fill="none" stroke="#7a3e1d" stroke-width="1.8" stroke-linecap="round"/>${leaves}
+    </g></g>`;
   };
   let rays = '';
-  for (let i = 0; i < 32; i++) rays += `<path transform="rotate(${i * 11.25})" d="M-3.4 -66 L3.4 -66 L0 -${i % 2 ? 80 : 88}Z" fill="${i % 2 ? '#f4a10e' : '#e2ad4f'}" opacity=".75"/>`;
-  rays += `<circle r="94" fill="none" stroke="#e2ad4f" stroke-width="1.4" stroke-dasharray="0 6" stroke-linecap="round"/>`;
+  for (let i = 0; i < 16; i++) rays += `<path transform="rotate(${i * 22.5})" d="M-5 -68 L5 -68 L0 -96Z" fill="${i % 2 ? '#f4a10e' : '#e2477b'}" stroke="${K}" stroke-width="1"/>`;
+  rays += `<circle r="60" fill="none" stroke="#e2ad4f" stroke-width="1.4" stroke-dasharray="0 6" stroke-linecap="round"/>`;
   let zig = 'M70 113';
   for (let x = 74, up = true; x <= 150; x += 5, up = !up) zig += ` L${x} ${up ? 108.5 : 117.5}`;
   const body = 'M90 74 H130 V82 C152 88 156 104 154 116 C151 138 134 152 110 152 C86 152 69 138 66 116 C64 104 68 88 90 82Z';
@@ -943,12 +1193,7 @@ $$('[data-halo]').forEach(g => {
     </g>
     <g class="k-bird l"><g transform="translate(36 134) scale(1.1)">${parrot()}</g></g>
     <g class="k-bird r"><g transform="translate(184 134) scale(-1.1 1.1)">${parrot()}</g></g>`;
-})();
-
-/* ---------- Section titles: wrap words for masked reveals ---------- */
-$$('.sh h2').forEach(h => {
-  h.innerHTML = h.innerHTML.split(/\s+/).filter(Boolean).map(w => `<span class="wd"><span>${w}</span></span>`).join(' ');
-});
+}
 
 /* ---------- Event icons ---------- */
 const ov = (d, p = 'pDotK') => `<path d="${d}" fill="url(#${p})"/>`;
@@ -1003,50 +1248,64 @@ const SPARK = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.2 6
 const PIN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>';
 
 /* ---------- Render itinerary ---------- */
-const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
-let evNo = 0;
-const venueChip = e => {
-  const name = e.venue || CONFIG.venue.name, url = e.mapUrl || CONFIG.venue.mapUrl;
-  if (!name) return '';
-  return url ? `<a class="ev-venue" href="${esc(url)}" target="_blank" rel="noopener">${PIN}${esc(name)}</a>` : `<span>${PIN}${esc(name)}</span>`;
-};
-$('#days').innerHTML = CONFIG.days.map((d, di) => `
-  <div class="day" id="day-${di}">
-    <div class="day-head" data-r="up"><span class="dnum">${d.num}</span><div><b>${d.month}</b><small>${d.weekday} · ${d.label}</small></div></div>
-    <div class="tl"><span class="tl-fill"></span>${d.events.map((e, i) => `
-      <div class="tl-item" style="--accent:${e.accent};--soft:${e.soft}">
-        <span class="node"></span>
-        <article class="ev" data-r="card" data-delay="${(i * .06).toFixed(2)}">
-          <span class="ev-n">${String(++evNo).padStart(2, '0')}</span>
-          <div class="ev-ico">${ICONS[e.icon]()}</div>
-          <div>
-            <span class="ev-time ev-a">${e.when === 'Evening' ? MOON : SUN}${esc(e.when)}${e.time ? ' · ' + esc(e.time) : ''}</span>
-            <h3 class="ev-a">${esc(e.title)}</h3>
-            <span class="ev-hi ev-a">${e.hindi}</span>
-          </div>
-          <p class="ev-a">${esc(e.desc)}</p>
-          <p class="ev-hd ev-a">${esc(e.descHi)}</p>
-          <div class="ev-meta ev-a"><span>${SPARK}${esc(e.dress)}</span>${venueChip(e)}</div>
-        </article>
-      </div>`).join('')}
-    </div>
-  </div>`).join('');
+function renderItinerary(c) {
+  if (!c || !c.days) return;
 
-/* ---------- Venue ---------- */
-(function () {
-  const v = CONFIG.venue;
-  $('#venueName').textContent = v.name || 'Venue details to follow';
-  $('#venueAddr').textContent = v.address || 'We will share the venue and timings with you soon. Until then, please save both dates.';
-  if (v.mapUrl) { $('#mapBtn').href = v.mapUrl; $('#mapBtn').hidden = false; $('#venuePin').href = v.mapUrl; $('#venueName').href = v.mapUrl; }
-})();
+  // Render day switcher tabs
+  const segEl = $('#segTabs');
+  if (segEl) {
+    segEl.innerHTML = `
+      <span class="seg-pill" id="segPill"></span>
+      ${c.days.map((d, i) => `
+        <button class="${i === 0 ? 'on' : ''}" data-day="${i}" role="tab" aria-selected="${i === 0}">
+          ${esc(d.tabLabel || d.label)}<small>${esc(d.tabSub || `${d.weekday.slice(0, 3)} · ${d.num} ${d.month.slice(0, 3)}`)}</small>
+        </button>
+      `).join('')}
+    `;
+  }
+
+  // Render days and timeline events
+  let evNo = 0;
+  const venueChip = e => {
+    const name = e.venue || c.venue?.name, url = e.mapUrl || c.venue?.mapUrl;
+    if (!name) return '';
+    return url ? `<a class="ev-venue" href="${esc(url)}" target="_blank" rel="noopener">${PIN}${esc(name)}</a>` : `<span>${PIN}${esc(name)}</span>`;
+  };
+  const daysEl = $('#days');
+  if (daysEl) {
+    daysEl.innerHTML = c.days.map((d, di) => `
+      <div class="day" id="day-${di}">
+        <div class="day-head" data-r="up"><span class="dnum">${esc(d.num)}</span><div><b>${esc(d.month)}</b><small>${esc(d.weekday)} · ${esc(d.label)}</small></div></div>
+        <div class="tl"><span class="tl-fill"></span>${(d.events || []).map((e, i) => `
+          <div class="tl-item" style="--accent:${e.accent || '#d98200'};--soft:${e.soft || '#fff0c9'}">
+            <span class="node"></span>
+            <article class="ev" data-r="card" data-delay="${(i * .06).toFixed(2)}">
+              <span class="ev-n">${String(++evNo).padStart(2, '0')}</span>
+              <div class="ev-ico">${(ICONS[e.icon] || ICONS.haldi)()}</div>
+              <div>
+                <span class="ev-time ev-a">${e.when === 'Evening' ? MOON : SUN}${esc(e.when)}${e.time ? ' · ' + esc(e.time) : ''}</span>
+                <h3 class="ev-a">${esc(e.title)}</h3>
+                <span class="ev-hi ev-a">${esc(e.hindi || '')}</span>
+              </div>
+              <p class="ev-a">${esc(e.desc || '')}</p>
+              <p class="ev-hd ev-a">${esc(e.descHi || '')}</p>
+              <div class="ev-meta ev-a"><span>${SPARK}${esc(e.dress || '')}</span>${venueChip(e)}</div>
+            </article>
+          </div>`).join('')}
+        </div>
+      </div>`).join('');
+  }
+}
 
 /* ---------- Split hero names into letters ---------- */
-$$('[data-split]').forEach(el => {
-  const t = el.textContent.trim();
-  el.textContent = '';
-  el.setAttribute('aria-hidden', 'true');
-  [...t].forEach(c => { const s = document.createElement('span'); s.className = 'ch'; s.textContent = c; el.appendChild(s); });
-});
+function initSplit() {
+  $$('[data-split]').forEach(el => {
+    const t = el.textContent.trim();
+    el.textContent = '';
+    el.setAttribute('aria-hidden', 'true');
+    [...t].forEach(c => { const s = document.createElement('span'); s.className = 'ch'; s.textContent = c; el.appendChild(s); });
+  });
+}
 
 /* =========================================================
    MOTION CHOREOGRAPHY
@@ -1080,44 +1339,41 @@ function revealHeader(el, delay) {
 
 function revealKalash(el) {
   const { animate, stagger } = M;
-  animate(el.querySelector('.k-rays'), { opacity: [0, 1], scale: [.5, 1] }, { duration: 1.6, ease: EASE });
-  animate(el.querySelectorAll('.k-vine'), { opacity: [0, 1], scale: [.6, 1] }, spring(120, 16, { delay: stagger(.1, { startDelay: .15 }) }));
-  animate(el.querySelector('.k-pot'), { opacity: [0, 1], y: [40, 0] }, spring(110, 14, { delay: .2 }));
-  animate(el.querySelectorAll('.k-leaf'), { opacity: [0, 1], scale: [0, 1] }, spring(220, 12, { delay: stagger(.07, { startDelay: .5, from: 'center' }) }));
-  animate(el.querySelector('.k-coco'), { opacity: [0, 1], y: [-36, 0] }, spring(240, 13, { delay: .85 }));
-  animate(el.querySelector('.k-bird.l'), { opacity: [0, 1], x: [-80, 0], y: [-40, 0], rotate: [-18, 0] }, spring(80, 13, { delay: .95 }));
-  animate(el.querySelector('.k-bird.r'), { opacity: [0, 1], x: [80, 0], y: [-40, 0], rotate: [18, 0] }, spring(80, 13, { delay: 1.1 }));
+  animate(el.querySelector('.k-rays'), { opacity: [0, 1], scale: [.5, 1] }, spring(140, 14));
+  animate(el.querySelectorAll('.k-leaf'), { opacity: [0, 1], scale: [.4, 1] }, { duration: .9, ease: EASE, delay: stagger(.07, { startDelay: .15 }) });
+  animate(el.querySelectorAll('.k-bob'), { opacity: [0, 1], y: [18, 0], scale: [.8, 1] }, { duration: .9, ease: EASE, delay: stagger(.12, { startDelay: .25 }) });
+  animate(el.querySelector('.k-pot'), { opacity: [0, 1], y: [24, 0] }, spring(160, 15, { delay: .1 }));
+  animate(el.querySelector('.k-coco'), { opacity: [0, 1], scale: [.7, 1] }, spring(180, 14, { delay: .2 }));
+}
+
+function revealSimple(el, r, delay) {
+  const { animate } = M;
+  const v = VARIANTS[r] || VARIANTS.up;
+  animate(el, v, { duration: .95, ease: EASE, delay });
 }
 
 function setupReveals() {
-  const { animate, inView, stagger } = M;
-  /* SVG parts are animated through attributes, so hide them the same way */
-  $$('#kalash .k-pot, #kalash .k-coco, #kalash .k-leaf, #kalash .k-bird, #kalash .k-rays, #kalash .k-vine').forEach(g => g.setAttribute('opacity', '0'));
-  inView('[data-r]', entry => {
-    const el = entry.target, type = el.dataset.r, delay = +(el.dataset.delay || 0);
-    if (type === 'card') return revealCard(el, delay);
-    if (type === 'kalash') return revealKalash(el);
-    if (el.classList.contains('sh')) return revealHeader(el, delay);
-    if (type === 'stagger') {
-      animate(el.querySelectorAll('[data-c]'), { opacity: [0, 1], y: [34, 0], scale: [.9, 1] }, spring(170, 15, { delay: stagger(.09, { startDelay: delay }) }));
-      return;
-    }
-    animate(el, VARIANTS[type] || VARIANTS.up, { duration: 1.05, ease: EASE, delay });
-  }, { margin: '0px 0px -12% 0px' });
+  const { inView } = M;
+  $$('[data-r]').forEach(el => {
+    const r = el.dataset.r, d = +el.dataset.delay || 0;
+    if (r === 'card') inView(el, () => revealCard(el, d), { margin: '-10% 0px -10% 0px' });
+    else if (r === 'stagger') inView(el, () => revealChildren(el, d));
+    else if (r === 'kalash') inView(el, () => revealKalash(el), { margin: '-15% 0px -15% 0px' });
+    else if (r === 'up' && el.classList.contains('sh')) inView(el, () => revealHeader(el, d), { margin: '-8% 0px -8% 0px' });
+    else inView(el, () => revealSimple(el, r, d), { margin: '-8% 0px -8% 0px' });
+  });
 }
 
 function setupScrollLinked() {
-  const { animate, scroll } = M;
-  const hero = $('#home'), couple = $('#couple'), events = $('#events');
+  const { scroll, animate } = M;
   const lin = { ease: 'linear' };
-  scroll(animate('#progress', { scaleX: [0, 1] }, lin));
+  const hero = $('#home'), couple = $('#couple');
+  const heroDim = hero.querySelector('.dim'), artWrap = $('#artWrap'), heroText = $('#heroText');
+  const layers = [['#lySky', 42], ['#lyTree', 18], ['#lyPk', -14]].map(([s, d]) => [$(s), d]);
 
-  /* hero → couple: hero stays pinned and recedes while the next section slides over it */
-  const cover = (target) => ({ target, offset: ['start end', 'start start'] });
-  const layers = [['#lySky', -26], ['#lyTree', 10], ['#lyPk', 42]].map(([sel, d]) => [$(sel), d]);
-  const artWrap = $('#artWrap'), heroText = $('#heroText'), heroDim = $('#home .dim');
-  /* q = 0 while the hero rests on screen, 1 once the Couple section has fully covered it */
-  const heroQ = p => { const p0 = Math.max(0, (innerHeight - couple.offsetTop) / innerHeight); return Math.min(1, Math.max(0, (p - p0) / (1 - p0))); };
+  const cover = target => ({ target, offset: ['start end', 'start start'] });
+  const heroQ = p => Math.min(1, Math.max(0, (p - .5) / .5));
+
   scroll(p => {
     const q = heroQ(p);
     hero.style.transform = q ? `scale(${(1 - .1 * q).toFixed(4)})` : '';
@@ -1129,53 +1385,40 @@ function setupScrollLinked() {
     layers.forEach(([g, d]) => g.setAttribute('transform', `translate(0 ${(q * d).toFixed(2)})`));
   }, cover(couple));
 
-  /* once fully covered, hide the pinned hero so later cut-outs reveal paper, not it */
   scroll(p => { hero.style.visibility = p >= .999 ? 'hidden' : ''; }, cover(couple));
 
-  /* countdown: the Gond sun-dial turns as the section passes, tiles drift gently */
   const cd = $('#countdown');
   scroll(animate('#cdDialWrap', { rotate: [-50, 70], scale: [.85, 1.1] }, lin), { target: cd, offset: ['start end', 'end start'] });
   scroll(animate('#cdNote', { y: [30, -10] }, lin), { target: cd, offset: ['start end', 'end start'] });
 
-  /* dark sections open like a jharokha arch as they arrive */
   [cd, $('#venue')].forEach(sec => scroll(
     animate(sec, { clipPath: ['inset(0% 9% 0% 9% round 220px 220px 0px 0px)', 'inset(0% 0% 0% 0% round 0px 0px 0px 0px)'] }, lin),
     { target: sec, offset: ['start end', 'start 55%'] }));
 
-  /* event cards tip forward into place */
   $$('.tl-item').forEach(it => scroll(animate(it, { rotateX: [22, 0], scale: [.9, 1], y: [40, 0] }, lin), { target: it, offset: ['start end', 'start 72%'] }));
   $$('.tl').forEach(tl => scroll(animate(tl.querySelector('.tl-fill'), { scaleY: [0, 1] }, lin), { target: tl, offset: ['start 72%', 'end 55%'] }));
 
-  /* background depth: rosettes, watermarks, floating motifs */
   const pass = el => ({ target: el, offset: ['start end', 'end start'] });
   $$('.corner').forEach(c => scroll(animate(c, { rotate: [0, 140], y: [60, -60] }, lin), pass(c.parentElement)));
   $$('.wm').forEach((w, i) => scroll(animate(w, { x: i % 2 ? [70, -70] : [-70, 70], y: [50, -40] }, lin), pass(w.parentElement)));
   $$('.float').forEach(f => { const d = +f.dataset.depth; scroll(animate(f, { y: [d * 110, -d * 110], rotate: [-10 * d, 10 * d] }, lin), pass(f.parentElement)); });
 
-  /* portraits drift at different speeds; the kalash halo turns */
   const figs = $$('.couple .portrait');
-  scroll(animate(figs[0], { y: [36, -24] }, lin), pass(couple));
-  scroll(animate(figs[1], { y: [-6, 30] }, lin), pass(couple));
+  if (figs[0]) scroll(animate(figs[0], { y: [36, -24] }, lin), pass(couple));
+  if (figs[1]) scroll(animate(figs[1], { y: [-6, 30] }, lin), pass(couple));
   scroll(animate('#kalashRays', { rotate: [-30, 30] }, lin), pass($('#blessings')));
 
-  /* Gond friezes slide sideways, alternating direction */
   const strips = $$('.app > .gb rect');
   let tick = false;
   const slide = () => { tick = false; strips.forEach((r, i) => { const v = (scrollY * .35 * (i % 2 ? 1 : -1)) % 28; r.setAttribute('x', (-28 + ((v + 28) % 28)).toFixed(1)); }); };
   addEventListener('scroll', () => { if (!tick) { tick = true; requestAnimationFrame(slide); } }, { passive: true });
 }
 
-/* pin stacked sections so their bottom edge aligns with the viewport */
 function pinStacks() {
   $$('[data-stack]').forEach(el => { el.style.top = Math.min(0, innerHeight - el.offsetHeight) + 'px'; });
 }
-pinStacks();
-addEventListener('resize', pinStacks);
-addEventListener('load', pinStacks);
-if (document.fonts) document.fonts.ready.then(pinStacks);
 
-/* Gond motifs that float at different depths */
-(function addDepthDecor() {
+function addDepthDecor() {
   const bird = c => `<svg viewBox="-24 -26 46 30"><path d="M-8 -10 L-21 -17 L-18 -5Z" fill="#f4a10e" stroke="${K}" stroke-width="1"/><ellipse cx="0" cy="-9" rx="11" ry="7.5" fill="${c}" stroke="${K}" stroke-width="1.1"/><ellipse cx="0" cy="-9" rx="11" ry="7.5" fill="url(#pDotW)"/><circle cx="9" cy="-16" r="5.2" fill="${c}" stroke="${K}" stroke-width="1.1"/><path d="M13.5 -17.5 L19 -15.5 L13.5 -14Z" fill="#f4a10e"/><circle cx="10" cy="-17" r="1.3" fill="#fff6e0"/></svg>`;
   const sprig = c => `<svg viewBox="-30 -62 60 74"><path d="M0 10 Q-3 -24 0 -58" stroke="#7a3e1d" stroke-width="2" fill="none"/>${[[-14, -42], [-26, 42], [-38, -36], [-50, 30]].map(([y, r]) => `<g transform="translate(0 ${y}) rotate(${r}) scale(.55)"><path d="${LEAF}" fill="${c}" stroke="${K}" stroke-width="1.8"/><path d="${LEAF}" fill="url(#pDotK)"/></g>`).join('')}</svg>`;
   const dots = c => `<svg viewBox="-20 -20 40 40">${[[0, 0, 4], [-12, -6, 2.6], [10, -10, 2.2], [12, 8, 3], [-6, 13, 2.2], [-15, 6, 1.6], [3, -16, 1.6]].map(([x, y, r]) => `<circle cx="${x}" cy="${y}" r="${r}" fill="${c}"/>`).join('')}</svg>`;
@@ -1198,15 +1441,13 @@ if (document.fonts) document.fonts.ready.then(pinStacks);
     el.innerHTML = LIB[kind](c);
     $(sec).prepend(el);
   });
-  /* oversized Hindi watermark behind each section title */
   $$('.sec .sh .hi').forEach(h => {
     const wm = document.createElement('div');
     wm.className = 'wm'; wm.setAttribute('aria-hidden', 'true'); wm.textContent = h.textContent;
     h.closest('.sec').prepend(wm);
   });
-})();
+}
 
-/* spring 3D tilt on portraits */
 function setupTilt() {
   const { animate } = M;
   $$('[data-tilt]').forEach(f => {
@@ -1218,7 +1459,6 @@ function setupTilt() {
   });
 }
 
-/* spring press feedback */
 function setupPress() {
   const { animate } = M;
   $$('.btn, .ev, .seg button').forEach(el => {
@@ -1229,7 +1469,6 @@ function setupPress() {
   });
 }
 
-/* gate entrance on load */
 function gateIntro() {
   const { animate } = M;
   animate([
@@ -1242,7 +1481,6 @@ function gateIntro() {
   animate('.seal-ring', { rotate: 360 }, { duration: 36, ease: 'linear', repeat: Infinity });
 }
 
-/* hero choreography after the doors open */
 function heroIntro(t0) {
   const { animate, stagger } = M;
   animate([
@@ -1296,10 +1534,12 @@ if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
 window.scrollTo(0, 0);
 
 /* ---------- Countdown ---------- */
-(function () {
-  const target = new Date(CONFIG.countdownTo).getTime();
+function initCountdown(c) {
+  if (!c.countdown?.target) return;
+  const target = new Date(c.countdown.target).getTime();
   const els = { d: $('[data-u=d]'), h: $('[data-u=h]'), m: $('[data-u=m]'), s: $('[data-u=s]') };
   function set(el, v) {
+    if (!el) return;
     v = String(v).padStart(2, '0');
     if (el.textContent === v) return;
     el.textContent = v;
@@ -1307,23 +1547,25 @@ window.scrollTo(0, 0);
   }
   function tick() {
     let diff = Math.max(0, target - Date.now());
-    if (diff === 0) $('#cdNote').textContent = 'The celebrations have begun!';
+    if (diff === 0 && $('#cdNote')) $('#cdNote').textContent = 'The celebrations have begun!';
     const d = Math.floor(diff / 864e5); diff -= d * 864e5;
     const h = Math.floor(diff / 36e5); diff -= h * 36e5;
     const m = Math.floor(diff / 6e4); diff -= m * 6e4;
     set(els.d, d); set(els.h, h); set(els.m, m); set(els.s, Math.floor(diff / 1e3));
   }
   tick(); setInterval(tick, 1000);
-})();
+}
 
 /* ---------- Animated pill: day switcher ---------- */
 function movePill(pill, el, instant) {
+  if (!pill || !el) return;
   const x = el.offsetLeft, w = el.offsetWidth;
   if (HAS_M && !instant) M.animate(pill, { x, width: w }, spring(380, 30));
   else { pill.style.transform = `translateX(${x}px)`; pill.style.width = w + 'px'; }
 }
-(function () {
+function setupDaySwitcher() {
   const segBtns = $$('.seg button'), segPill = $('#segPill'), days = $$('.day');
+  if (!segBtns.length) return;
   let curDay = -1;
   function setDay(i, instant) {
     if (i === curDay) return; curDay = i;
@@ -1332,7 +1574,7 @@ function movePill(pill, el, instant) {
   }
   segBtns.forEach((b, i) => b.addEventListener('click', () => {
     setDay(i);
-    days[i].scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'start' });
+    if (days[i]) days[i].scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'start' });
   }));
   let ticking = false;
   function update() {
@@ -1342,43 +1584,62 @@ function movePill(pill, el, instant) {
     setDay(d);
   }
   addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
-  addEventListener('resize', () => movePill(segPill, segBtns[curDay], true));
+  addEventListener('resize', () => { if (segBtns[curDay]) movePill(segPill, segBtns[curDay], true); });
   setDay(0, true);
-})();
+}
 
 /* ---------- Toast ---------- */
 function toast(msg) { const t = $('#toast'); t.textContent = msg; t.classList.add('show'); clearTimeout(toast.t); toast.t = setTimeout(() => t.classList.remove('show'), 2400); }
 
 /* ---------- Save the dates (.ics) ---------- */
-$('#calBtn').addEventListener('click', () => {
-  const v = CONFIG.venue, loc = [v.name, v.address].filter(Boolean).join(', ').replace(/([,;])/g, '\\$1');
-  const next = iso => { const d = new Date(+iso.slice(0, 4), +iso.slice(4, 6) - 1, +iso.slice(6) + 1); return `${d.getFullYear()}${String(d.getMonth() + 1).padStart(2, '0')}${String(d.getDate()).padStart(2, '0')}`; };
-  const lines = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Anjali & Mridul//Wedding//EN', 'CALSCALE:GREGORIAN'];
-  CONFIG.days.forEach((d, i) => {
-    lines.push('BEGIN:VEVENT', `UID:anjali-mridul-day${i + 1}@wedding`, 'DTSTAMP:20261019T000000Z',
-      `DTSTART;VALUE=DATE:${d.iso}`, `DTEND;VALUE=DATE:${next(d.iso)}`,
-      `SUMMARY:Anjali & Mridul · ${d.events.map(e => e.title).join('\\, ')}`,
-      `DESCRIPTION:${d.events.map(e => `${e.when}: ${e.title}`).join('\\n')}`);
-    if (loc) lines.push(`LOCATION:${loc}`);
-    lines.push('END:VEVENT');
+function initCalendar(c) {
+  const calBtn = $('#calBtn');
+  if (!calBtn) return;
+  calBtn.addEventListener('click', () => {
+    const v = c.venue || {}, loc = [v.name, v.address].filter(Boolean).join(', ').replace(/([,;])/g, '\\$1');
+    const next = iso => { const d = new Date(+iso.slice(0, 4), +iso.slice(4, 6) - 1, +iso.slice(6) + 1); return `${d.getFullYear()}${String(d.getMonth() + 1).padStart(2, '0')}${String(d.getDate()).padStart(2, '0')}`; };
+    const coupleName = c.couple ? `${c.couple.bride.name} & ${c.couple.groom.name}` : 'Wedding';
+    const lines = ['BEGIN:VCALENDAR', 'VERSION:2.0', `PRODID:-//${coupleName}//Wedding//EN`, 'CALSCALE:GREGORIAN'];
+    (c.days || []).forEach((d, i) => {
+      lines.push('BEGIN:VEVENT', `UID:wedding-day${i + 1}-${d.iso}@wedding`, 'DTSTAMP:20261019T000000Z',
+        `DTSTART;VALUE=DATE:${d.iso}`, `DTEND;VALUE=DATE:${next(d.iso)}`,
+        `SUMMARY:${coupleName} · ${(d.events || []).map(e => e.title).join('\\, ')}`,
+        `DESCRIPTION:${(d.events || []).map(e => `${e.when}: ${e.title}`).join('\\n')}`);
+      if (loc) lines.push(`LOCATION:${loc}`);
+      lines.push('END:VEVENT');
+    });
+    lines.push('END:VCALENDAR');
+    const blob = new Blob([lines.join('\r\n')], { type: 'text/calendar' });
+    const a = document.createElement('a');
+    const slug = (c.couple ? `${c.couple.bride.name}-${c.couple.groom.name}` : 'Wedding').replace(/\s+/g, '-');
+    a.href = URL.createObjectURL(blob); a.download = `${slug}-Wedding.ics`;
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+    toast('Calendar file ready');
   });
-  lines.push('END:VCALENDAR');
-  const blob = new Blob([lines.join('\r\n')], { type: 'text/calendar' });
-  const a = document.createElement('a');
-  a.href = URL.createObjectURL(blob); a.download = 'Anjali-Mridul-Wedding.ics';
-  document.body.appendChild(a); a.click(); a.remove();
-  setTimeout(() => URL.revokeObjectURL(a.href), 2000);
-  toast('Calendar file ready');
-});
+}
 
 /* ---------- Share ---------- */
-$('#shareBtn').addEventListener('click', async () => {
-  const data = { title: 'Anjali & Mridul · Shubh Vivah', text: 'You are invited to the wedding of Anjali & Mridul · 2–3 December 2026', url: location.href };
-  try {
-    if (navigator.share) await navigator.share(data);
-    else { await navigator.clipboard.writeText(location.href); toast('Invitation link copied'); }
-  } catch (e) { /* share dismissed */ }
-});
+function initShare(c) {
+  const shareBtn = $('#shareBtn');
+  if (!shareBtn) return;
+  shareBtn.addEventListener('click', async () => {
+    const coupleName = c.couple ? `${c.couple.bride.name} & ${c.couple.groom.name}` : 'Wedding';
+    const data = {
+      title: c.meta?.title || `${coupleName} · Shubh Vivah`,
+      text: c.meta?.description || `You are invited to the wedding of ${coupleName}`,
+      url: location.href
+    };
+    try {
+      if (navigator.share) await navigator.share(data);
+      else { await navigator.clipboard.writeText(location.href); toast('Invitation link copied'); }
+    } catch (e) {
+      if (e.name !== 'AbortError') {
+        await navigator.clipboard.writeText(location.href); toast('Invitation link copied');
+      }
+    }
+  });
+}
 
 /* ---------- Marigold petals ---------- */
 const Petals = (function () {
@@ -1441,20 +1702,23 @@ const Petals = (function () {
 })();
 
 /* ---------- Loader ---------- */
-(function loader() {
+function runLoader(c) {
   const el = $('#loader');
+  if (!el) return;
   const cols = ['#f4a10e', '#d63a1f', '#13877a', '#e2477b'];
   let dots = '', petals = '';
-  for (let i = 0; i < 48; i++) {
-    const a = (i * 7.5 - 90) * Math.PI / 180;
-    dots += `<circle class="ld-dot" cx="${(114 * Math.cos(a)).toFixed(2)}" cy="${(114 * Math.sin(a)).toFixed(2)}" r="${i % 4 ? 1.8 : 3}" fill="${i % 4 ? '#e2ad4f' : cols[(i / 4) % 4]}"/>`;
+  for (let i = 0; i < 36; i++) {
+    const a = i * 10 * Math.PI / 180;
+    dots += `<circle cx="${(106 * Math.cos(a)).toFixed(2)}" cy="${(106 * Math.sin(a)).toFixed(2)}" r="2.2" fill="${cols[i % 4]}"/>`;
   }
   for (let i = 0; i < 16; i++) {
     petals += `<g transform="rotate(${i * 22.5}) translate(0 -50)"><g class="ld-petal" style="animation-delay:${(.35 + i * .06).toFixed(2)}s"><path d="${LEAF}" fill="${cols[i % 4]}" stroke="${K}" stroke-width="1.2"/><path d="${LEAF}" fill="url(#pDotK)"/><path d="M0 -3V-31" stroke="${K}" stroke-width=".9" opacity=".5"/></g></g>`;
   }
   $('#ldDots').innerHTML = dots;
   $('#ldPetals').innerHTML = petals;
-  $('#ldPk').innerHTML = `<g transform="translate(12 40) scale(.66)">${window.peacockSVG(false)}</g>`;
+  if (window.peacockSVG) {
+    $('#ldPk').innerHTML = `<g transform="translate(12 40) scale(.66)">${window.peacockSVG(false)}</g>`;
+  }
   el.classList.add('go');
   if (HAS_M) M.animate('#loader .ld-text > *', { opacity: [0, 1], y: [14, 0] }, { duration: .9, ease: EASE, delay: M.stagger(.12, { startDelay: .6 }) });
 
@@ -1491,15 +1755,63 @@ const Petals = (function () {
     ]).then(() => el.remove());
     setTimeout(gateIntro, 650);
   }
-})();
-
-/* ---------- Boot ---------- */
-if (HAS_M) {
-  setupReveals();
-  setupScrollLinked();
-  setupTilt();
-  setupPress();
 }
+
+/* =========================================================
+   APPLICATION BOOTSTRAP
+   ========================================================= */
+async function boot() {
+  const CONFIG = await loadConfig();
+  if (!CONFIG) {
+    console.error('Wedding card configuration could not be loaded.');
+    return;
+  }
+  window.CONFIG = CONFIG;
+
+  // 1. Populate dynamic data & render itinerary
+  applyDynamicData(CONFIG);
+  renderItinerary(CONFIG);
+  initSplit();
+
+  // 2. Wrap section titles for masked reveals
+  $$('.sh h2').forEach(h => {
+    h.innerHTML = h.innerHTML.split(/\s+/).filter(Boolean).map(w => `<span class="wd"><span>${w}</span></span>`).join(' ');
+  });
+
+  // 3. Setup component listeners
+  initCountdown(CONFIG);
+  setupDaySwitcher();
+  initCalendar(CONFIG);
+  initShare(CONFIG);
+
+  // 4. Build procedural SVG motifs
+  initRosettesAndHalos();
+  buildHero();
+  buildToran();
+  buildDial();
+  buildKalash();
+
+  // 5. Add floating motifs & pin stacks
+  addDepthDecor();
+  pinStacks();
+  addEventListener('resize', pinStacks);
+  addEventListener('load', pinStacks);
+  if (document.fonts) document.fonts.ready.then(pinStacks);
+
+  // 6. Motion choreography
+  if (HAS_M) {
+    setupReveals();
+    setupScrollLinked();
+    setupTilt();
+    setupPress();
+  }
+
+  // 7. Start loader
+  runLoader(CONFIG);
+}
+
+boot();
+
 </script>
 </body>
 </html>
