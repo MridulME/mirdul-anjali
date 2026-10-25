@@ -2,7 +2,7 @@
 
 A luxury, interactive digital Indian wedding card web application inspired by traditional royal aesthetics and Gond folk art.
 
-This repository is customized for **Mridul & Kunika** with the **Groom details positioned first**, and upgraded with a **dynamic configuration system** (`config.json` & `config.js`) supporting multi-day celebrations:
+This repository is customized for **Mridul & Anjali** with the **Groom details positioned first**, and upgraded with a **dynamic configuration system** (`config.json` & `config.js`) supporting multi-day celebrations:
 - **Day 1 (01 Dec)**: Haldi Ceremony
 - **Day 2 (02 Dec)**: Mehandi & Sangeet Night
 - **Day 3 (03 Dec)**: Shaadi & Phere (Wedding Ceremony)
@@ -12,7 +12,7 @@ This repository is customized for **Mridul & Kunika** with the **Groom details p
 
 ## ✨ Features
 
-- **🤵 Groom Details First**: Mridul Raj & Kunika Jain. Groom's name and illustrated portrait are positioned first throughout the entire invitation (Hero, Portraits, Royal Seal, Loader, Blessings, Calendar, and Share Dialog).
+- **🤵 Groom Details First**: Mridul Raj & Anjali Singh. Groom's name and illustrated portrait are positioned first throughout the entire invitation (Hero, Portraits, Royal Seal, Loader, Blessings, Calendar, and Share Dialog).
 - **📅 4-Function Itinerary Timeline**:
   - **Day 1 (Tue, 01 Dec)**: Haldi Ceremony (Morning & Afternoon)
   - **Day 2 (Wed, 02 Dec)**: Mehandi & Sangeet Night (Evening)
@@ -57,8 +57,8 @@ You can edit your wedding details in either [`config.json`](config.json) (for we
 ```json
 {
   "meta": {
-    "title": "Mridul & Kunika · Shubh Vivah",
-    "description": "You are invited to the wedding celebrations of Mridul Raj & Kunika Jain · 1–5 December 2026"
+    "title": "Mridul & Anjali · Shubh Vivah",
+    "description": "You are invited to the wedding celebrations of Mridul Raj & Anjali Singh · 1–5 December 2026"
   },
   "couple": {
     "groom": {
@@ -69,18 +69,18 @@ You can edit your wedding details in either [`config.json`](config.json) (for we
       "portrait": ""
     },
     "bride": {
-      "name": "Kunika Jain",
-      "heroName": "Kunika",
-      "hindi": "कुनिका जैन",
+      "name": "Anjali Singh",
+      "heroName": "Anjali",
+      "hindi": "अंजलि सिंह",
       "role": "The Bride",
       "portrait": ""
     },
-    "monogram": "M & K"
+    "monogram": "M & A"
   },
   "wedding": {
     "topBlessing": "॥ जय गणेशाय नमः ॥",
     "subBlessing": "॥ शुभ विवाह ॥",
-    "sealMantra": "SHUBH VIVAH ✦ MRIDUL & KUNIKA ✦ 1 – 5 DECEMBER 2026 ✦",
+    "sealMantra": "SHUBH VIVAH ✦ MRIDUL & ANJALI ✦ 1 – 5 DECEMBER 2026 ✦",
     "sealTap": "Tap to open",
     "gateInviteHi": "आप सादर आमंत्रित हैं",
     "gateInviteEn": "You are cordially invited",

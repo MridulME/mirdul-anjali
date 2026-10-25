@@ -1,9 +1,9 @@
 // Auto-generated configuration for offline and file:/// compatibility
 window.CONFIG = {
   "meta": {
-    "title": "Mridul & Kunika · Shubh Vivah",
-    "description": "You are invited to the wedding celebrations of Mridul Raj & Kunika Jain · 1–5 December 2026",
-    "ogTitle": "Mridul & Kunika · Shubh Vivah",
+    "title": "Mridul & Anjali · Shubh Vivah",
+    "description": "You are invited to the wedding celebrations of Mridul Raj & Anjali Singh · 1–5 December 2026",
+    "ogTitle": "Mridul & Anjali · Shubh Vivah",
     "ogDescription": "Haldi, Mehandi, Shaadi & Reception · 1–5 December 2026"
   },
   "couple": {
@@ -15,18 +15,18 @@ window.CONFIG = {
       "portrait": ""
     },
     "bride": {
-      "name": "Kunika Jain",
-      "heroName": "Kunika",
-      "hindi": "कुनिका जैन",
+      "name": "Anjali Singh",
+      "heroName": "Anjali",
+      "hindi": "अंजलि सिंह",
       "role": "The Bride",
       "portrait": ""
     },
-    "monogram": "M & K"
+    "monogram": "M & A"
   },
   "wedding": {
     "topBlessing": "॥ जय गणेशाय नमः ॥",
     "subBlessing": "॥ शुभ विवाह ॥",
-    "sealMantra": "SHUBH VIVAH ✦ MRIDUL & KUNIKA ✦ 1 – 5 DECEMBER 2026 ✦",
+    "sealMantra": "SHUBH VIVAH ✦ MRIDUL & ANJALI ✦ 1 – 5 DECEMBER 2026 ✦",
     "sealTap": "Tap to open",
     "gateInviteHi": "आप सादर आमंत्रित हैं",
     "gateInviteEn": "You are cordially invited",
@@ -159,7 +159,7 @@ window.CONFIG = {
     "sectionTitle": "With Love & Blessings",
     "lead": "Your presence and blessings will make our celebration complete.",
     "leadHi": "आपकी उपस्थिति और आशीर्वाद से हमारा उत्सव पूर्ण होगा।",
-    "signature": "Mridul & Kunika",
+    "signature": "Mridul & Anjali",
     "family": "with our families",
     "closingMantra": "॥ जय गणेशाय नमः ॥"
   }
