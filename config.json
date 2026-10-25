@@ -47,9 +47,9 @@
     "note": "until the haldi begins · Tuesday, 1 December"
   },
   "venue": {
-    "name": "Krishnam Resort & Marriage Garden",
-    "address": "Damoh, Madhya Pradesh",
-    "mapUrl": "https://maps.app.goo.gl/imVwWHP4Yv332h2F8"
+    "name": "Wedding Festivities · Dhanbad, Jharkhand",
+    "address": "Day 1 & 2 (Haldi & Mehandi): Harina Baghan Colony, Harina Basti (828306)\nDay 3 (Shaadi): Phusbunglow, Bhaga More (828301)\nDay 5 (Grand Reception): Dumra (828306)",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=RC97%2BC42%2C+Phusbunglow%2C+Bhaga+More%2C+Jharkhand+828301"
   },
   "days": [
     {
@@ -72,7 +72,8 @@
           "desc": "A sunshine-soaked celebration of turmeric, fragrant marigolds, and joyous laughter as loved ones bless the couple with a golden glow.",
           "descHi": "हल्दी, गेंदे के फूलों और हँसी-ख़ुशी से भरी पावन रस्म, जब सभी प्रियजन मिलकर वर-वधू को शुभ आशीर्वाद व स्नेह देंगे।",
           "dress": "Shades of Yellow",
-          "venue": ""
+          "venue": "Harina Baghan Colony, Harina Basti, Jharkhand 828306",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=R646%2BVRV%2C+Harina+Baghan+Colony%2C+Harina+Basti%2C+Jharkhand+828306"
         }
       ]
     },
@@ -96,7 +97,8 @@
           "desc": "An enchanting evening of intricate henna artistry, foot-tapping beats of the dhol, dance performances, and musical celebration with family and friends.",
           "descHi": "हाथों में रचने वाली मेहंदी के रंगों, ढोल की थाप, मधुर संगीत और अपनों के संग झूमते-गाते जश्न की एक हसीन व यादगार शाम।",
           "dress": "Festive Green & Traditional Glam",
-          "venue": ""
+          "venue": "Harina Baghan Colony, Harina Basti, Jharkhand 828306",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=R646%2BVRV%2C+Harina+Baghan+Colony%2C+Harina+Basti%2C+Jharkhand+828306"
         }
       ]
     },
@@ -120,7 +122,8 @@
           "desc": "The sacred union: holy vows taken around the sacred fire, sealed with Vedic rituals, blessings of the elders and the divine.",
           "descHi": "पवित्र अग्नि के साक्षी में सात फेरों का पावन बंधन, वैदिक मंत्रोच्चार और बड़ों व ईश्वर के मंगल आशीर्वाद के साथ नवजीवन का शुभारंभ।",
           "dress": "Royal Indian Ethnic & Traditional Finery",
-          "venue": ""
+          "venue": "Phusbunglow, Bhaga More, Jharkhand 828301",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=RC97%2BC42%2C+Phusbunglow%2C+Bhaga+More%2C+Jharkhand+828301"
         }
       ]
     },
@@ -144,7 +147,8 @@
           "desc": "A royal evening of felicitations, fine dining, and joyous celebration welcoming the newly married couple as they begin their journey together.",
           "descHi": "नवदम्पति के सम्मान में आयोजित एक भव्य एवं शाही शाम, स्वादिष्ट प्रीतिभोज और परिजनों व स्नेहीजनों के मंगल आशीर्वाद का उत्सव।",
           "dress": "Royal Formal / Black Tie & Glam",
-          "venue": ""
+          "venue": "Dumra, Jharkhand 828306",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Dumra%2C+Jharkhand+828306"
         }
       ]
     }

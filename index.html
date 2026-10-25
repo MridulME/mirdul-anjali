@@ -225,7 +225,7 @@ body.opened .bird{animation:fadeIn .8s ease 2s forwards}
 .cd > div{background:linear-gradient(180deg,rgba(45,35,96,.92),rgba(28,21,60,.92));-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);border:1px solid var(--hair-d);border-radius:18px;padding:18px 2px 14px;text-align:center;position:relative;overflow:hidden}
 .cd > div::after{content:"";position:absolute;left:22%;right:22%;bottom:0;height:2px;border-radius:2px;background:linear-gradient(90deg,transparent,var(--marigold),transparent)}
 .cd .num{height:40px;overflow:hidden}
-.cd b{display:block;font-family:var(--serif);font-size:40px;font-weight:600;color:var(--gold-l);line-height:1;font-variant-numeric:lining-nums tabular-nums}
+.cd b{display:block;font-family:var(--serif);font-size:clamp(28px,6vw,40px);font-weight:600;color:var(--gold-l);line-height:1;font-variant-numeric:lining-nums tabular-nums}
 .cd span{display:block;font-size:8.5px;letter-spacing:.28em;text-transform:uppercase;color:#a99bb9;margin-top:8px;padding-left:.28em}
 .cd-note{text-align:center;margin-top:24px;font-family:var(--serif);font-style:italic;color:#d8c7a6;font-size:17px;position:relative;z-index:1}
 
@@ -285,7 +285,13 @@ body.opened .bird{animation:fadeIn .8s ease 2s forwards}
 a.venue-name,a.venue-ico{text-decoration:none;display:block}
 a.venue-ico{display:grid}
 .venue-name{font-family:var(--serif);font-size:28px;font-weight:600;color:var(--gold-l);line-height:1.1}
-.venue-addr{color:var(--cream-2);font-size:14px;line-height:1.65;margin:10px auto 0;max-width:280px}
+.venue-addr{color:var(--cream-2);font-size:14px;line-height:1.75;margin:12px auto 0;max-width:380px;white-space:pre-line}
+.venue-locs{display:flex;flex-direction:column;gap:10px;margin:20px auto 4px;max-width:380px;text-align:left}
+.venue-loc-item{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 16px;background:rgba(255,255,255,.05);border:1px solid rgba(226,173,79,.22);border-radius:14px;color:var(--cream-1);text-decoration:none;transition:all .25s ease;font-size:12.5px}
+.venue-loc-item:hover{background:rgba(226,173,79,.14);border-color:var(--gold-l);transform:translateY(-1px)}
+.venue-loc-item b{color:var(--gold-l);font-family:var(--serif);font-size:14.5px;display:block;line-height:1.2}
+.venue-loc-item small{color:var(--cream-2);font-size:11.5px;display:block;margin-top:3px}
+.venue-loc-item span.loc-arr{font-size:14px;color:var(--gold-l);flex-shrink:0;padding-left:6px}
 .btns{display:flex;flex-direction:column;gap:10px;margin-top:26px}
 .btn{display:flex;align-items:center;justify-content:center;gap:9px;padding:15px 20px;border-radius:999px;font:500 11.5px var(--sans);letter-spacing:.18em;text-transform:uppercase;border:1px solid rgba(226,173,79,.55);color:var(--gold-l);text-decoration:none;will-change:transform}
 .btn[hidden]{display:none}
@@ -625,7 +631,7 @@ a.venue-ico{display:grid}
       <div data-c><div class="num"><b data-u="s">00</b></div><span>Seconds</span></div>
     </div>
     </div>
-    <p class="cd-note" data-r="fade" data-delay=".3" id="cdNote">until the haldi begins · Wednesday, 2 December</p>
+    <p class="cd-note" data-r="fade" data-delay=".3" id="cdNote">until the haldi begins · Tuesday, 1 December</p>
   </section>
   <svg class="gb" aria-hidden="true"><rect width="110%" height="16" fill="url(#pBorder)"/></svg>
 
@@ -655,6 +661,7 @@ a.venue-ico{display:grid}
       <a class="venue-ico" id="venuePin" target="_blank" rel="noopener" aria-label="Open venue in Google Maps"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg></a>
       <a class="venue-name" id="venueName" target="_blank" rel="noopener"></a>
       <div class="venue-addr" id="venueAddr"></div>
+      <div class="venue-locs" id="venueLocs"></div>
       <div class="btns">
         <a class="btn solid" id="mapBtn" target="_blank" rel="noopener" hidden>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 11l18-8-8 18-2-8z"/></svg>Open in Google Maps</a>
@@ -737,9 +744,9 @@ a.venue-ico{display:grid}
     "note": "until the haldi begins · Tuesday, 1 December"
   },
   "venue": {
-    "name": "Krishnam Resort & Marriage Garden",
-    "address": "Damoh, Madhya Pradesh",
-    "mapUrl": "https://maps.app.goo.gl/imVwWHP4Yv332h2F8"
+    "name": "Wedding Festivities · Dhanbad, Jharkhand",
+    "address": "Day 1 & 2 (Haldi & Mehandi): Harina Baghan Colony, Harina Basti (828306)\nDay 3 (Shaadi): Phusbunglow, Bhaga More (828301)\nDay 5 (Grand Reception): Dumra (828306)",
+    "mapUrl": "https://www.google.com/maps/search/?api=1&query=RC97%2BC42%2C+Phusbunglow%2C+Bhaga+More%2C+Jharkhand+828301"
   },
   "days": [
     {
@@ -762,7 +769,8 @@ a.venue-ico{display:grid}
           "desc": "A sunshine-soaked celebration of turmeric, fragrant marigolds, and joyous laughter as loved ones bless the couple with a golden glow.",
           "descHi": "हल्दी, गेंदे के फूलों और हँसी-ख़ुशी से भरी पावन रस्म, जब सभी प्रियजन मिलकर वर-वधू को शुभ आशीर्वाद व स्नेह देंगे।",
           "dress": "Shades of Yellow",
-          "venue": ""
+          "venue": "Harina Baghan Colony, Harina Basti, Jharkhand 828306",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=R646%2BVRV%2C+Harina+Baghan+Colony%2C+Harina+Basti%2C+Jharkhand+828306"
         }
       ]
     },
@@ -786,7 +794,8 @@ a.venue-ico{display:grid}
           "desc": "An enchanting evening of intricate henna artistry, foot-tapping beats of the dhol, dance performances, and musical celebration with family and friends.",
           "descHi": "हाथों में रचने वाली मेहंदी के रंगों, ढोल की थाप, मधुर संगीत और अपनों के संग झूमते-गाते जश्न की एक हसीन व यादगार शाम।",
           "dress": "Festive Green & Traditional Glam",
-          "venue": ""
+          "venue": "Harina Baghan Colony, Harina Basti, Jharkhand 828306",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=R646%2BVRV%2C+Harina+Baghan+Colony%2C+Harina+Basti%2C+Jharkhand+828306"
         }
       ]
     },
@@ -810,7 +819,8 @@ a.venue-ico{display:grid}
           "desc": "The sacred union: holy vows taken around the sacred fire, sealed with Vedic rituals, blessings of the elders and the divine.",
           "descHi": "पवित्र अग्नि के साक्षी में सात फेरों का पावन बंधन, वैदिक मंत्रोच्चार और बड़ों व ईश्वर के मंगल आशीर्वाद के साथ नवजीवन का शुभारंभ।",
           "dress": "Royal Indian Ethnic & Traditional Finery",
-          "venue": ""
+          "venue": "Phusbunglow, Bhaga More, Jharkhand 828301",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=RC97%2BC42%2C+Phusbunglow%2C+Bhaga+More%2C+Jharkhand+828301"
         }
       ]
     },
@@ -834,7 +844,8 @@ a.venue-ico{display:grid}
           "desc": "A royal evening of felicitations, fine dining, and joyous celebration welcoming the newly married couple as they begin their journey together.",
           "descHi": "नवदम्पति के सम्मान में आयोजित एक भव्य एवं शाही शाम, स्वादिष्ट प्रीतिभोज और परिजनों व स्नेहीजनों के मंगल आशीर्वाद का उत्सव।",
           "dress": "Royal Formal / Black Tie & Glam",
-          "venue": ""
+          "venue": "Dumra, Jharkhand 828306",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Dumra%2C+Jharkhand+828306"
         }
       ]
     }
@@ -1007,6 +1018,35 @@ function applyDynamicData(c) {
       if (mapBtn) { mapBtn.href = c.venue.mapUrl; mapBtn.hidden = false; }
       if (venuePin) venuePin.href = c.venue.mapUrl;
       if (vName) vName.href = c.venue.mapUrl;
+    }
+    const locList = $('#venueLocs');
+    if (locList) {
+      const locItems = [
+        {
+          label: 'Day 1 & 2 · Haldi & Mehandi',
+          venue: 'Harina Baghan Colony, Harina Basti, Jharkhand 828306',
+          mapUrl: 'https://www.google.com/maps/search/?api=1&query=R646%2BVRV%2C+Harina+Baghan+Colony%2C+Harina+Basti%2C+Jharkhand+828306'
+        },
+        {
+          label: 'Day 3 · Shaadi & Phere (Wedding)',
+          venue: 'Phusbunglow, Bhaga More, Jharkhand 828301',
+          mapUrl: 'https://www.google.com/maps/search/?api=1&query=RC97%2BC42%2C+Phusbunglow%2C+Bhaga+More%2C+Jharkhand+828301'
+        },
+        {
+          label: 'Day 5 · Grand Wedding Reception',
+          venue: 'Dumra, Jharkhand 828306',
+          mapUrl: 'https://www.google.com/maps/search/?api=1&query=Dumra%2C+Jharkhand+828306'
+        }
+      ];
+      locList.innerHTML = locItems.map(l => `
+        <a class="venue-loc-item" href="${esc(l.mapUrl)}" target="_blank" rel="noopener">
+          <div>
+            <b>${esc(l.label)}</b>
+            <small>${esc(l.venue)}</small>
+          </div>
+          <span class="loc-arr">↗</span>
+        </a>
+      `).join('');
     }
   }
 
@@ -1389,6 +1429,21 @@ function revealKalash(el) {
   animate(el.querySelector('.k-coco'), { opacity: [0, 1], scale: [.7, 1] }, spring(180, 14, { delay: .2 }));
 }
 
+function revealChildren(el, delay = 0) {
+  const items = el.querySelectorAll('[data-c]');
+  if (!items.length) return;
+  if (!HAS_M || !M.animate) {
+    items.forEach(it => { it.style.opacity = '1'; });
+    return;
+  }
+  const { animate, stagger } = M;
+  animate(items, { opacity: [0, 1], y: [24, 0], scale: [.92, 1] }, {
+    duration: .8,
+    ease: EASE,
+    delay: stagger ? stagger(.08, { startDelay: delay }) : delay
+  });
+}
+
 function revealSimple(el, r, delay) {
   const { animate } = M;
   const v = VARIANTS[r] || VARIANTS.up;
@@ -1400,7 +1455,7 @@ function setupReveals() {
   $$('[data-r]').forEach(el => {
     const r = el.dataset.r, d = +el.dataset.delay || 0;
     if (r === 'card') inView(el, () => revealCard(el, d), { margin: '-10% 0px -10% 0px' });
-    else if (r === 'stagger') inView(el, () => revealChildren(el, d));
+    else if (r === 'stagger') inView(el, () => revealChildren(el, d), { margin: '-5% 0px -5% 0px' });
     else if (r === 'kalash') inView(el, () => revealKalash(el), { margin: '-15% 0px -15% 0px' });
     else if (r === 'up' && el.classList.contains('sh')) inView(el, () => revealHeader(el, d), { margin: '-8% 0px -8% 0px' });
     else inView(el, () => revealSimple(el, r, d), { margin: '-8% 0px -8% 0px' });
@@ -1644,11 +1699,12 @@ function initCalendar(c) {
     const coupleName = c.couple ? `${c.couple.groom.name} & ${c.couple.bride.name}` : 'Wedding';
     const lines = ['BEGIN:VCALENDAR', 'VERSION:2.0', `PRODID:-//${coupleName}//Wedding//EN`, 'CALSCALE:GREGORIAN'];
     (c.days || []).forEach((d, i) => {
+      const eventLoc = (d.events && d.events[0] && d.events[0].venue) ? d.events[0].venue.replace(/([,;])/g, '\\$1') : loc;
       lines.push('BEGIN:VEVENT', `UID:wedding-day${i + 1}-${d.iso}@wedding`, 'DTSTAMP:20261019T000000Z',
         `DTSTART;VALUE=DATE:${d.iso}`, `DTEND;VALUE=DATE:${next(d.iso)}`,
         `SUMMARY:${coupleName} · ${(d.events || []).map(e => e.title).join('\\, ')}`,
         `DESCRIPTION:${(d.events || []).map(e => `${e.when}: ${e.title}`).join('\\n')}`);
-      if (loc) lines.push(`LOCATION:${loc}`);
+      if (eventLoc) lines.push(`LOCATION:${eventLoc}`);
       lines.push('END:VEVENT');
     });
     lines.push('END:VCALENDAR');
