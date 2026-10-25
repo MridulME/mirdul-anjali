@@ -78,7 +78,7 @@ You can edit your wedding details in either [`config.json`](config.json) (for we
     "monogram": "M & K"
   },
   "wedding": {
-    "topBlessing": "॥ जय जिनेन्द्र ॥",
+    "topBlessing": "॥ जय गणेशाय नमः ॥",
     "subBlessing": "॥ शुभ विवाह ॥",
     "sealMantra": "SHUBH VIVAH ✦ MRIDUL & KUNIKA ✦ 1 – 5 DECEMBER 2026 ✦",
     "sealTap": "Tap to open",
