@@ -116,12 +116,34 @@ You can edit your wedding details in either [`config.json`](config.json) (for we
 
 ---
 
-## 🚢 Deploying to Vercel
+## 🌐 Deploying to GitHub Pages (Free Web Hosting)
+
+This repository includes an automated GitHub Actions deployment workflow ([`.github/workflows/deploy.yml`](.github/workflows/deploy.yml)).
+
+### Steps to activate GitHub Pages:
+
+1. **Push your code to GitHub**:
+   ```bash
+   git push origin main
+   ```
+2. In your repository on GitHub, go to **Settings** > **Pages** (in the left sidebar).
+3. Under **Build and deployment** > **Source**, select **GitHub Actions**.
+4. That's it! GitHub will automatically trigger the workflow and publish your site at:
+   ```
+   https://<your-username>.github.io/<repository-name>/
+   ```
+   For this repo: `https://mridulme.github.io/mirdul-anjali/`
+
+Any future commit pushed to `main` will automatically build and update the live invitation within seconds.
+
+---
+
+## 🚢 Alternative: Deploying to Vercel
 
 1. Push your changes to GitHub:
    ```bash
    git add .
-   git commit -m "Update Reception to 5th December"
+   git commit -m "Update wedding invitation"
    git push origin main
    ```
 2. Log in to [Vercel](https://vercel.com/) and click **Add New > Project**.
