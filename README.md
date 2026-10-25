@@ -3,10 +3,10 @@
 A luxury, interactive digital Indian wedding card web application inspired by traditional royal aesthetics and Gond folk art.
 
 This repository is customized for **Mridul & Kunika** with the **Groom details positioned first**, and upgraded with a **dynamic configuration system** (`config.json` & `config.js`) supporting multi-day celebrations:
-- **Day 1**: Haldi Ceremony
-- **Day 2**: Mehandi & Sangeet Night
-- **Day 3**: Shaadi & Phere (Wedding Ceremony)
-- **Day 5**: Grand Wedding Reception
+- **Day 1 (01 Dec)**: Haldi Ceremony
+- **Day 2 (02 Dec)**: Mehandi & Sangeet Night
+- **Day 3 (03 Dec)**: Shaadi & Phere (Wedding Ceremony)
+- **Day 5 (05 Dec)**: Grand Wedding Reception
 
 ---
 
@@ -14,10 +14,10 @@ This repository is customized for **Mridul & Kunika** with the **Groom details p
 
 - **🤵 Groom Details First**: Mridul Raj & Kunika Singh. Groom's name and illustrated portrait are positioned first throughout the entire invitation (Hero, Portraits, Royal Seal, Loader, Blessings, Calendar, and Share Dialog).
 - **📅 4-Function Itinerary Timeline**:
-  - **Day 1**: Haldi Ceremony (Morning & Afternoon)
-  - **Day 2**: Mehandi & Sangeet Night (Evening)
-  - **Day 3**: Shaadi & Phere (Auspicious Wedding Muhurat)
-  - **Day 5**: Grand Wedding Reception (Royal Banquet)
+  - **Day 1 (Tue, 01 Dec)**: Haldi Ceremony (Morning & Afternoon)
+  - **Day 2 (Wed, 02 Dec)**: Mehandi & Sangeet Night (Evening)
+  - **Day 3 (Thu, 03 Dec)**: Shaadi & Phere (Auspicious Wedding Muhurat)
+  - **Day 5 (Sat, 05 Dec)**: Grand Wedding Reception (Royal Evening Banquet)
   - Interactive multi-tab switcher with spring physics pill animation
   - Bilingual English and Hindi descriptions
   - Color-coded ceremony badges with custom vector SVG icons (including dedicated henna mandala for Mehandi)
@@ -27,7 +27,7 @@ This repository is customized for **Mridul & Kunika** with the **Groom details p
 - **🎨 Gond Art & Traditional Motifs**: 100% procedural vector SVG artwork (Tree of Life, Peacocks, Rosettes, Toran, Kalash).
 - **🌸 Ambient Falling Petals**: Floating golden marigold petals drifting down the invitation.
 - **⏳ Live Countdown Timer**: Animated Gond sun-dial counting down days, hours, minutes, and seconds in real-time.
-- **🗓️ 1-Click "Add to Calendar"**: Generates a standard `.ics` iCalendar file for all 4 wedding events.
+- **🗓️ 1-Click "Add to Calendar"**: Generates a standard `.ics` iCalendar file for all wedding events.
 - **📍 Venue & Navigation**: Embedded venue card with one-tap Google Maps directions.
 - **💌 Shareable**: Integrated with the Web Share API and a copy-to-clipboard fallback with toast notifications.
 - **⚡ Zero Build Dependencies**: Pure HTML5, CSS3, and Vanilla JavaScript with Framer Motion (`motion.js`) loaded via CDN. No compilation or node_modules required.
@@ -58,7 +58,7 @@ You can edit your wedding details in either [`config.json`](config.json) (for we
 {
   "meta": {
     "title": "Mridul & Kunika · Shubh Vivah",
-    "description": "You are invited to the wedding celebrations of Mridul Raj & Kunika Singh · 2–6 December 2026"
+    "description": "You are invited to the wedding celebrations of Mridul Raj & Kunika Singh · 1–5 December 2026"
   },
   "couple": {
     "groom": {
@@ -80,25 +80,25 @@ You can edit your wedding details in either [`config.json`](config.json) (for we
   "wedding": {
     "topBlessing": "॥ जय जिनेन्द्र ॥",
     "subBlessing": "॥ शुभ विवाह ॥",
-    "sealMantra": "SHUBH VIVAH ✦ MRIDUL & KUNIKA ✦ 2 – 6 DECEMBER 2026 ✦",
+    "sealMantra": "SHUBH VIVAH ✦ MRIDUL & KUNIKA ✦ 1 – 5 DECEMBER 2026 ✦",
     "sealTap": "Tap to open",
     "gateInviteHi": "आप सादर आमंत्रित हैं",
     "gateInviteEn": "You are cordially invited",
-    "gateDate": "2 – 6 December 2026",
+    "gateDate": "1 – 5 December 2026",
     "eyebrow": "Together with their families",
     "invitationLine": "request the honour of your presence as they begin their forever",
     "dates": {
-      "ariaLabel": "Wednesday 2 to Sunday 6 December 2026",
-      "startDay": "Wed",
-      "startDate": "02",
-      "endDay": "Sun",
-      "endDate": "06",
+      "ariaLabel": "Tuesday 1 to Saturday 5 December 2026",
+      "startDay": "Tue",
+      "startDate": "01",
+      "endDay": "Sat",
+      "endDate": "05",
       "monthYear": "December 2026"
     }
   },
   "countdown": {
-    "target": "2026-12-02T11:00:00+05:30",
-    "note": "until the haldi begins · Wednesday, 2 December"
+    "target": "2026-12-01T11:00:00+05:30",
+    "note": "until the haldi begins · Tuesday, 1 December"
   },
   "venue": {
     "name": "Krishnam Resort & Marriage Garden",
@@ -106,7 +106,10 @@ You can edit your wedding details in either [`config.json`](config.json) (for we
     "mapUrl": "https://maps.app.goo.gl/imVwWHP4Yv332h2F8"
   },
   "days": [
-    // Day 1: Haldi, Day 2: Mehandi, Day 3: Shaadi, Day 5: Reception
+    // Day 1: Haldi (01 Dec)
+    // Day 2: Mehandi (02 Dec)
+    // Day 3: Shaadi (03 Dec)
+    // Day 5: Reception (05 Dec)
   ]
 }
 ```
@@ -118,7 +121,7 @@ You can edit your wedding details in either [`config.json`](config.json) (for we
 1. Push your changes to GitHub:
    ```bash
    git add .
-   git commit -m "Add 4-day wedding functions: Haldi, Mehandi, Shaadi, Reception"
+   git commit -m "Update Reception to 5th December"
    git push origin main
    ```
 2. Log in to [Vercel](https://vercel.com/) and click **Add New > Project**.

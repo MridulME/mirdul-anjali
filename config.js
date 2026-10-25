@@ -1,9 +1,9 @@
 window.CONFIG = {
   "meta": {
     "title": "Mridul & Kunika · Shubh Vivah",
-    "description": "You are invited to the wedding celebrations of Mridul Raj & Kunika Singh · 2–6 December 2026",
+    "description": "You are invited to the wedding celebrations of Mridul Raj & Kunika Singh · 1–5 December 2026",
     "ogTitle": "Mridul & Kunika · Shubh Vivah",
-    "ogDescription": "Haldi, Mehandi, Shaadi & Reception · 2–6 December 2026"
+    "ogDescription": "Haldi, Mehandi, Shaadi & Reception · 1–5 December 2026"
   },
   "couple": {
     "groom": {
@@ -25,26 +25,26 @@ window.CONFIG = {
   "wedding": {
     "topBlessing": "॥ जय जिनेन्द्र ॥",
     "subBlessing": "॥ शुभ विवाह ॥",
-    "sealMantra": "SHUBH VIVAH ✦ MRIDUL & KUNIKA ✦ 2 – 6 DECEMBER 2026 ✦",
+    "sealMantra": "SHUBH VIVAH ✦ MRIDUL & KUNIKA ✦ 1 – 5 DECEMBER 2026 ✦",
     "sealTap": "Tap to open",
     "gateInviteHi": "आप सादर आमंत्रित हैं",
     "gateInviteEn": "You are cordially invited",
-    "gateDate": "2 – 6 December 2026",
+    "gateDate": "1 – 5 December 2026",
     "eyebrow": "Together with their families",
     "invitationLine": "request the honour of your presence as they begin their forever",
     "eventsIntro": "Four joyous days of colour, music, traditions and blessings. We would love for you to be there for every moment.",
     "dates": {
-      "ariaLabel": "Wednesday 2 to Sunday 6 December 2026",
-      "startDay": "Wed",
-      "startDate": "02",
-      "endDay": "Sun",
-      "endDate": "06",
+      "ariaLabel": "Tuesday 1 to Saturday 5 December 2026",
+      "startDay": "Tue",
+      "startDate": "01",
+      "endDay": "Sat",
+      "endDate": "05",
       "monthYear": "December 2026"
     }
   },
   "countdown": {
-    "target": "2026-12-02T11:00:00+05:30",
-    "note": "until the haldi begins · Wednesday, 2 December"
+    "target": "2026-12-01T11:00:00+05:30",
+    "note": "until the haldi begins · Tuesday, 1 December"
   },
   "venue": {
     "name": "Krishnam Resort & Marriage Garden",
@@ -53,13 +53,13 @@ window.CONFIG = {
   },
   "days": [
     {
-      "iso": "20261202",
+      "iso": "20261201",
       "num": "01",
       "month": "December",
-      "weekday": "Wednesday",
+      "weekday": "Tuesday",
       "label": "Day One",
       "tabLabel": "Day 1",
-      "tabSub": "Haldi",
+      "tabSub": "Haldi · 1 Dec",
       "events": [
         {
           "icon": "haldi",
@@ -77,13 +77,13 @@ window.CONFIG = {
       ]
     },
     {
-      "iso": "20261203",
+      "iso": "20261202",
       "num": "02",
       "month": "December",
-      "weekday": "Thursday",
+      "weekday": "Wednesday",
       "label": "Day Two",
       "tabLabel": "Day 2",
-      "tabSub": "Mehandi",
+      "tabSub": "Mehandi · 2 Dec",
       "events": [
         {
           "icon": "mehandi",
@@ -101,13 +101,13 @@ window.CONFIG = {
       ]
     },
     {
-      "iso": "20261204",
+      "iso": "20261203",
       "num": "03",
       "month": "December",
-      "weekday": "Friday",
+      "weekday": "Thursday",
       "label": "Day Three",
       "tabLabel": "Day 3",
-      "tabSub": "Shaadi",
+      "tabSub": "Shaadi · 3 Dec",
       "events": [
         {
           "icon": "fire",
@@ -125,13 +125,13 @@ window.CONFIG = {
       ]
     },
     {
-      "iso": "20261206",
+      "iso": "20261205",
       "num": "05",
       "month": "December",
-      "weekday": "Sunday",
+      "weekday": "Saturday",
       "label": "Day Five",
       "tabLabel": "Day 5",
-      "tabSub": "Reception",
+      "tabSub": "Reception · 5 Dec",
       "events": [
         {
           "icon": "baraat",
