@@ -162,5 +162,11 @@ window.CONFIG = {
     "signature": "Mridul & Anjali",
     "family": "with our families",
     "closingMantra": "॥ जय गणेशाय नमः ॥"
+  },
+  "music": {
+    "enabled": true,
+    "src": "audio/wedding-music.mp3",
+    "volume": 0.7,
+    "loop": true
   }
 };

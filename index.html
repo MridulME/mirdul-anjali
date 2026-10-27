@@ -399,6 +399,9 @@ a.venue-ico{display:grid}
 </svg>
 
 
+<!-- Background Wedding Music (invisible, autoplays on entry) -->
+<audio id="bgMusic" src="audio/wedding-music.mp3" preload="auto" loop style="display:none"></audio>
+
 <!-- ============ LOADER ============ -->
 <div id="loader" aria-label="Loading invitation" role="status">
   <svg class="ld-border t" aria-hidden="true"><rect width="110%" height="16" fill="url(#pBorder)"/></svg>
@@ -858,6 +861,12 @@ a.venue-ico{display:grid}
     "signature": "Mridul & Anjali",
     "family": "with our families",
     "closingMantra": "॥ जय गणेशाय नमः ॥"
+  },
+  "music": {
+    "enabled": true,
+    "src": "audio/wedding-music.mp3",
+    "volume": 0.7,
+    "loop": true
   }
 }
 </script>
@@ -1605,6 +1614,8 @@ function finishOpen() {
 function openInvite() {
   if (opened) return;
   opened = true;
+  const audio = $('#bgMusic');
+  if (audio && audio.paused) audio.play().catch(() => {});
   if (!HAS_M) {
     gate.classList.add('open');
     document.body.classList.add('opened');
@@ -1630,6 +1641,59 @@ function openInvite() {
 $('#openBtn').addEventListener('click', openInvite);
 if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
 window.scrollTo(0, 0);
+
+/* ---------- Background Music (Zero UI, Autoplay on entry) ---------- */
+function initMusic(c) {
+  if (c.music && c.music.enabled === false) return;
+  const audio = $('#bgMusic');
+  if (!audio) return;
+  const src = c.music?.src || 'audio/wedding-music.mp3';
+  if (audio.getAttribute('src') !== src) audio.src = src;
+  audio.loop = c.music?.loop !== false;
+  const targetVol = typeof c.music?.volume === 'number' ? c.music.volume : 0.7;
+  audio.volume = targetVol;
+
+  let hasStarted = false;
+
+  function tryPlay() {
+    if (hasStarted) return;
+    const p = audio.play();
+    if (p !== undefined) {
+      p.then(() => {
+        hasStarted = true;
+        removeListeners();
+      }).catch(() => {
+        // Browser blocked autoplay before user gesture; waiting for first interaction
+      });
+    }
+  }
+
+  const events = ['click', 'touchstart', 'touchend', 'pointerdown', 'keydown', 'scroll'];
+  function onFirstInteract() {
+    tryPlay();
+  }
+  function removeListeners() {
+    events.forEach(e => window.removeEventListener(e, onFirstInteract, { capture: true }));
+  }
+
+  events.forEach(e => window.addEventListener(e, onFirstInteract, { capture: true, passive: true }));
+
+  // Immediate attempts on entry
+  tryPlay();
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', tryPlay);
+  }
+  window.addEventListener('load', tryPlay);
+
+  // Tab switch & phone lock management
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+      audio.pause();
+    } else if (hasStarted) {
+      audio.play().catch(() => {});
+    }
+  });
+}
 
 /* ---------- Countdown ---------- */
 function initCountdown(c) {
@@ -1882,6 +1946,7 @@ async function boot() {
   setupDaySwitcher();
   initCalendar(CONFIG);
   initShare(CONFIG);
+  initMusic(CONFIG);
 
   // 4. Build procedural SVG motifs
   initRosettesAndHalos();

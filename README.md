@@ -26,6 +26,7 @@ This repository is customized for **Mridul & Anjali** with the **Groom details p
 - **🚪 Royal Gate Opening Ceremony**: Interactive royal palace doors with gold latches that part open on tap/click with smooth entrance choreography.
 - **🎨 Gond Art & Traditional Motifs**: 100% procedural vector SVG artwork (Tree of Life, Peacocks, Rosettes, Toran, Kalash).
 - **🌸 Ambient Falling Petals**: Floating golden marigold petals drifting down the invitation.
+- **🎶 Ambient Background Wedding Music**: Seamlessly plays the wedding soundtrack in the background as guests enter the invitation, with zero clutter or on-screen widgets.
 - **⏳ Live Countdown Timer**: Animated Gond sun-dial counting down days, hours, minutes, and seconds in real-time.
 - **🗓️ 1-Click "Add to Calendar"**: Generates a standard `.ics` iCalendar file for all wedding events.
 - **📍 Venue & Navigation**: Embedded venue card with one-tap Google Maps directions.
